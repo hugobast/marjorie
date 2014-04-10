@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.0'
 gem 'pg'
+gem 'devise'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -16,5 +17,6 @@ gem 'spring', group: :development
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pry', groups: [:development, :test]
-gem 'steak', group: :test
-gem 'database_cleaner', group: :test
+gem 'steak', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
+gem 'database_cleaner', group: [:development, :test]
