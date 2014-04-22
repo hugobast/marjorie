@@ -2,6 +2,10 @@ module Admin
   class EssaysController < AdminController
     layout 'application'
 
+    def index
+
+    end
+
     def show
       @essay = Essay.find(params[:id])
     end

@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :essays
+
+  constraints subdomain: 'admin' do
+    namespace 'admin' do
+      resources :essays
+    end
+
   end
 
-  root to: 'home#index'
-
   devise_for :users
+
+  # root to: 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
