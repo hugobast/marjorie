@@ -11,6 +11,6 @@
  * file per style scope.
  *
  *= require fonts
- *= require login
+ *= require layout
  *= require_self
  */
