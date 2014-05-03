@@ -7,26 +7,35 @@ feature 'Admin can create new content', %q{
 } do
 
   background do
-    @marjorie = create(:admin)
+    marjorie = create(:admin)
+    login_as marjorie
   end
 
   scenario 'first scenario' do
-    login_as @marjorie
     visit new_admin_essay_path
 
     within('#new_essay') do
-      fill_in 'Title', with: 'Lorem ipsum dolor sit amet'
-      fill_in 'Content', with: %q{
+      enter_title('Lorem ipsum dolor sit amet')
+      enter_content(%q{
         Apollonius of Perga extraplanetary.
-        Tingling of the spine. Orion's sword,
-        rich in heavy atoms cosmic ocean
-        astonishment encyclopaedia galactica
-        tesseract
-      }
+        Tingling of the spine.
+      })
 
-      click_button('Save')
+      save!
     end
 
     expect(page).to have_content('Essay was saved successfully')
+  end
+
+  def enter_title(title)
+    fill_in 'Title', with: title
+  end
+
+  def enter_content(content)
+    fill_in 'Content', with: content
+  end
+
+  def save!
+    click_button('Save')
   end
 end
