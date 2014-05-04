@@ -1,3 +1,5 @@
 - @essays.each do |essay|
-  h1= essay.title
-  .content= essay.content
+  article.row
+    h1= essay.title
+    p.content
+      = simple_format essay.content
