@@ -1,5 +1,5 @@
 - @essays.each do |essay|
   article.row
     h1= essay.title
-    p.content
+    section
       = simple_format essay.content
