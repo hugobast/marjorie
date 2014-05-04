@@ -13,5 +13,6 @@
  *= require bootstrap
  *= require fonts
  *= require layout
+ *= require header
  *= require_self
  */
