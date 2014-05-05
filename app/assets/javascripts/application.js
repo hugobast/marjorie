@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+try{Typekit.load();}catch(e){}

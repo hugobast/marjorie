@@ -3,6 +3,8 @@ html
   head
     title Marjorie
     = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag '//use.typekit.net/iel2qll.js'
+
     = csrf_meta_tags
 
   body
@@ -17,11 +19,13 @@ html
 
     section.jumbotron
       .container
-        header
+        header.col-md-6.col-md-offset-3
           h1 Le beau jour
-          p Seitan crucifix mixtape plaid keytar Bushwick. Actually brunch twee fixie ethnic, next level DIY Neutra roof party salvia gentrify pork belly semiotics gluten-free ennui.
+          p Seitan crucifix mixtape plaid keytar Bushwick.
           p
-            a.btn.btn-primary.btn-lg role='button' Learn more
+            a.btn.btn-primary.btn-lg role='button' f
+            a.btn.btn-primary.btn-lg role='button' t
+            a.btn.btn-primary.btn-lg role='button' e
 
 
     .container
