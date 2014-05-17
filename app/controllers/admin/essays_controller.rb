@@ -1,6 +1,6 @@
 module Admin
   class EssaysController < AdminController
-    layout 'application'
+    layout 'admin'
 
     def index
 
