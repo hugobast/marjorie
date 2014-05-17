@@ -1,14 +1,8 @@
-//= depend_on_asset 'header-background-small-3.jpg'
-
 @import 'compass';
-
-$jaune: #fcf986;
-$bleu: #6fa2b5;
-$rouge: #e3365a;
 
 .jumbotron {
   height: 400px;
-  background: image_url('header-background-small-3.jpg') fixed;
+  background-color: white;
 
   header {
     @include border-radius(10px);
@@ -21,7 +15,6 @@ $rouge: #e3365a;
       padding-top: 30px;
       font-family: "learning-curve";
       font-size: 96px;
-      color: $bleu;
     }
   }
 }
