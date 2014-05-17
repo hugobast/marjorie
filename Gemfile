@@ -13,13 +13,18 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'slim'
 gem 'unicorn'
 
-# Spring speeds up development by keeping your application running in the background.
-# Read more: https://github.com/rails/spring
-gem 'spring', group: :development
+group :development do
+  gem 'spring'
+end
 
-gem 'dotenv-rails', groups: [:development, :test]
-gem 'pry', groups: [:development, :test]
-gem 'steak', group: [:development, :test]
-gem 'factory_girl_rails', group: [:development, :test]
-gem 'database_cleaner', group: [:development, :test]
-gem 'poltergeist', group: [:development, :test]
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'pry'
+end
+
+group :test do
+  gem 'steak'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'poltergeist'
+end
