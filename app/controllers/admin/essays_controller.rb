@@ -1,7 +1,5 @@
 module Admin
   class EssaysController < AdminController
-    layout 'admin'
-
     def index
 
     end
