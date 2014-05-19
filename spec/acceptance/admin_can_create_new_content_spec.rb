@@ -1,17 +1,12 @@
 require 'acceptance/acceptance_helper'
 
-feature 'Admin can create new content', %q{
-  In order to share with the world
-  As a thinker, writer, etc
-  I want to put new content out
-} do
-
+feature 'Admin can create' do
   background do
     marjorie = create(:admin)
     login_as marjorie
   end
 
-  scenario 'first scenario' do
+  scenario 'new content' do
     visit new_admin_essay_path
 
     within('#new_essay') do
