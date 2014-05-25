@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   constraints subdomain: 'admin' do
     namespace 'admin', path: '/' do
-      root to: 'essays#index', as: :admin_root
+      root to: 'dashboard#show', as: :admin_root
+
       devise_for :users
 
       resources :essays
