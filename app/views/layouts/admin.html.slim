@@ -3,11 +3,14 @@ html
   head
     title Admin - Marjorie
     = stylesheet_link_tag 'admin', media: 'all'
+    = javascript_include_tag '//use.typekit.net/iel2qll.js'
     = csrf_meta_tags
   body
+    = render 'admin/shared/navigation'
+
     .container
-      - flash.each do |name, msg|
-        = content_tag :div, msg, class: name
-      = yield
+      = render 'admin/shared/messages'
+
+      .col-sm-9= yield
 
     = javascript_include_tag 'admin'
