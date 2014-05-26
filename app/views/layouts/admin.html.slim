@@ -6,11 +6,11 @@ html
     = javascript_include_tag '//use.typekit.net/iel2qll.js'
     = csrf_meta_tags
   body
-    = render 'admin/shared/navigation'
+    - if current_admin_user
+      = render 'admin/shared/navigation'
 
     .container
       = render 'admin/shared/messages'
-
-      .col-sm-9= yield
+      = yield
 
     = javascript_include_tag 'admin'
