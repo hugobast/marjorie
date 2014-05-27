@@ -12,6 +12,16 @@ module Admin
       @essay = Essay.find(params[:id])
     end
 
+    def update
+      @essay = Essay.find(params[:id])
+
+      if @essay.update_attributes(essay_params)
+        redirect_to admin_essay_path(@essay), notice: 'Essay was saved successfully'
+      else
+        redirect_to edit_admin_essay_path(@essay), error: 'Essay failed to save'
+      end
+    end
+
     def new
       @essay = Essay.new
     end
