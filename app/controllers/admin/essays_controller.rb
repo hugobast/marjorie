@@ -8,6 +8,10 @@ module Admin
       @essay = Essay.find(params[:id])
     end
 
+    def edit
+      @essay = Essay.find(params[:id])
+    end
+
     def new
       @essay = Essay.new
     end
