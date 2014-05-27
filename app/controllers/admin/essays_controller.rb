@@ -1,7 +1,7 @@
 module Admin
   class EssaysController < AdminController
     def index
-
+      @essays = Essay.all
     end
 
     def show
