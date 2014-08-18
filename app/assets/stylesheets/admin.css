@@ -1,6 +1,7 @@
 /*
  *= require bootstrap
- *= require bootstrap-wysihtml5
+ *= require font-awesome
+ *= require froala_editor.min
  *= require_self
  *= require_tree ./admin
  */

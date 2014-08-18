@@ -1,12 +1,14 @@
 require 'spec_helper'
 
-feature 'Admin can create' do
+feature 'Admin can create', js: true do
   background do
     marjorie = create(:admin)
-    login_as marjorie
+    sign_in! marjorie
   end
 
   scenario 'new content' do
+    screenshot_and_open_image
+
     visit new_admin_essay_path
 
     within('#new_essay') do
@@ -27,10 +29,14 @@ feature 'Admin can create' do
   end
 
   def enter_content(content)
-    fill_in 'Content', with: content
+    editor.set(content)
   end
 
   def save!
     click_button('Save')
+  end
+
+  def editor
+    find('.froala-element')
   end
 end
