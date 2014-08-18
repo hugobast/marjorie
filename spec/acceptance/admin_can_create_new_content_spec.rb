@@ -1,14 +1,17 @@
 require 'spec_helper'
 
-feature 'Admin can create', js: true do
+feature 'Admin can create new content', %q{
+  In order to put new content on my website
+  As an administrator
+  I want create a new essay and save it
+}, js: true do
+
   background do
     marjorie = create(:admin)
     sign_in! marjorie
   end
 
-  scenario 'new content' do
-    screenshot_and_open_image
-
+  scenario do
     visit new_admin_essay_path
 
     within('#new_essay') do
@@ -38,5 +41,23 @@ feature 'Admin can create', js: true do
 
   def editor
     find('.froala-element')
+  end
+end
+
+feature 'Visitor cannot create new content', %q{
+  In order to restrict content creation
+  When a visitor tries to access the backoffice
+  He should be redirected
+}, js: true do
+
+  background do
+    visitor = create(:visitor)
+    sign_in! visitor
+  end
+
+  scenario do
+    visit new_admin_essay_path
+
+    expect(current_path).to eq homepage
   end
 end
