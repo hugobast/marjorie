@@ -34,7 +34,7 @@ module Admin
     private
 
     def essay_params
-      params.require(:essay).permit(:title, :content)
+      params.require(:essay).permit(:title, :content, :image)
     end
   end
 end
