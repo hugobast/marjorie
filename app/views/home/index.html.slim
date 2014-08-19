@@ -2,4 +2,9 @@
   article.row
     h1= essay.title
     section
-      = simple_format essay.content
+      = image_tag cycle('http://fillmurray.com/700/325',
+                        'http://fillmurray.com/g/700/340',
+                        'http://fillmurray.com/700/340',
+                        'http://fillmurray.com/700/380')
+    section
+      = raw essay.content

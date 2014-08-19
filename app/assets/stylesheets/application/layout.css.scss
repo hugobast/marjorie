@@ -1,12 +1,19 @@
 @import 'compass';
 
+$darkest: #252525;
+$darker: #393939;
+$dark: #464646;
+$lighter: #898989;
+$light: #C2C2C2;
+
 body {
   font-family: 'source-serif-pro';
   text-shadow: 1px 1px #eee;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
+  color: $darker;
 
-  background: image_url('background.png') repeat;
+  background: image_url('background.png') repeat fixed;
 }
 
 h1 {
@@ -14,8 +21,7 @@ h1 {
   font-weight: 700;
   font-size: 36px;
   text-align: center;
-  color: black;
-  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 nav {
@@ -39,8 +45,13 @@ nav {
   }
 }
 
-article::after {
-  padding-bottom: 100px;
+article {
+  background: white;
+  @include single-box-shadow($light, 5px, 5px, 0px, 0px);
+
+  &::after {
+    margin-bottom: 100px;
+  }
 }
 
 p {
