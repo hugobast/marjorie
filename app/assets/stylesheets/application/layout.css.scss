@@ -1,15 +1,17 @@
-@import '../../../../../../../../../usr/local/var/rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass';
+@import 'compass';
 
 body {
-  font-family: 'Merriweather';
+  font-family: 'source-serif-pro';
   text-shadow: 1px 1px #eee;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
+
+  background: image_url('background.png') repeat;
 }
 
 h1 {
-  font-family: 'Josefin Sans';
-  font-weight: 400;
+  font-family: 'ff-nuvo-web-pro';
+  font-weight: 700;
   font-size: 36px;
   text-align: center;
   color: black;
@@ -18,7 +20,7 @@ h1 {
 
 nav {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: 'Josefin Sans';
 
   &.navbar-default {
@@ -43,9 +45,7 @@ article::after {
 
 p {
   padding: 10px 30px;
-  line-height: 1.5em;
-  letter-spacing: -0.01em;
-  text-align: justify;
+  line-height: 1.8em;
 }
 
 @media (min-width: 1200px) {
