@@ -7,19 +7,18 @@ $lighter: #898989;
 $light: #C2C2C2;
 
 body {
-  font-family: 'source-serif-pro';
+  font-family: 'fanwood';
   text-shadow: 1px 1px #eee;
   font-size: 16px;
   font-weight: 400;
   color: $darker;
-
-  background: image_url('background.png') repeat fixed;
 }
 
 h1 {
-  font-family: 'ff-nuvo-web-pro';
+  font-family: 'kepler-std-semicondensed-dis';
+  text-transform: uppercase;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 44px;
   text-align: center;
   margin-top: 20px;
 }
@@ -47,7 +46,6 @@ nav {
 
 article {
   background: white;
-  @include single-box-shadow($light, 5px, 5px, 0px, 0px);
 
   &::after {
     margin-bottom: 100px;
@@ -56,7 +54,7 @@ article {
 
 p {
   padding: 10px 30px;
-  line-height: 1.8em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 1200px) {
