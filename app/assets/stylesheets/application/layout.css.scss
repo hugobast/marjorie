@@ -14,15 +14,6 @@ body {
   color: $darker;
 }
 
-h1 {
-  font-family: 'kepler-std-semicondensed-dis';
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 44px;
-  text-align: center;
-  margin-top: 20px;
-}
-
 nav {
   font-size: 16px;
   font-weight: 400;
@@ -47,17 +38,33 @@ nav {
 article {
   background: white;
 
+  h1 {
+    font-family: 'kepler-std-semicondensed-dis';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  img {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
   &::after {
     margin-bottom: 100px;
   }
 }
 
 p {
-  padding: 10px 30px;
+  padding: 10px;
   line-height: 1.5em;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .container {
     width: 700px;
   }
