@@ -13,7 +13,8 @@ gem 'jquery-rails', '~> 3.1.0'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'slim', '~> 2.0.2'
-gem 'unicorn'
+gem 'puma'
+gem 'foreman'
 gem 'carrierwave', '~> 0.10.0'
 
 group :development do
