@@ -1,23 +1,22 @@
-@import 'compass';
-
 $darkest: #252525;
 $darker: #393939;
 $dark: #464646;
 $lighter: #898989;
 $light: #C2C2C2;
 
+$article-bottom-spacing: 100px;
+
 body {
-  font-family: 'fanwood';
-  text-shadow: 1px 1px #eee;
+  font-family: 'fanwood', serif;
   font-size: 16px;
   font-weight: 400;
   color: $darker;
 }
 
 nav {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  font-family: 'Josefin Sans';
+  font-family: 'Josefin Sans', cursive;
 
   &.navbar-default {
     background: white;
@@ -39,7 +38,7 @@ article {
   background: white;
 
   h1 {
-    font-family: 'kepler-std-semicondensed-dis';
+    font-family: 'kepler-std-semicondensed-dis', serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 44px;
@@ -49,19 +48,19 @@ article {
   }
 
   img {
-    padding: 10px;
+    padding: 1rem;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
 
   &::after {
-    margin-bottom: 100px;
+    margin-bottom: $article-bottom-spacing;
   }
 }
 
 p {
-  padding: 10px;
-  line-height: 1.5em;
+  padding: 1rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 768px) {
