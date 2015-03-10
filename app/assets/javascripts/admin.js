@@ -16,10 +16,13 @@ var options = {
   ]
 };
 
-$('form').on('submit', function() {
-  $('#essay_content').val(pen.getContent());
-});
-
 // create editor
-var pen = window.pen = new Pen(options);
-$el.addClass('hinted');
+if ($el.length) {
+  var pen = window.pen = new Pen(options);
+  $el.addClass('hinted');
+
+  $('form').on('submit', function() {
+    $('#essay_content').val(pen.getContent());
+  });
+
+}

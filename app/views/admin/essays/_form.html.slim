@@ -1,18 +1,13 @@
 
-.row
-  = form_for [:admin, @essay] do |form|
-    .form-group
-      = form.label :title
-      = form.text_field :title, class: 'form-control'
+= form_for [:admin, @essay] do |form|
+  = form.label :title
+  = form.text_field :title, class: 'form-control'
 
-    .form-group
-      = form.label :image
-      = form.file_field :image, class: 'form-control'
+  = form.label :image
+  = form.file_field :image, class: 'form-control'
 
-    .form-group
-      = form.label :content
-      #content= raw @essay.content
-      = form.hidden_field :content
+  = form.label :content
+  #content= raw @essay.content
+  = form.hidden_field :content
 
-    .form-group
-      = form.submit 'Save', class: 'btn btn-default'
+  = form.submit 'Save', class: 'btn btn-default'

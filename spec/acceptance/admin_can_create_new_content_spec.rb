@@ -40,6 +40,6 @@ feature 'Admin can create new content', %q{
   end
 
   def editor
-    find('.froala-element')
+    find('.pen')
   end
 end
