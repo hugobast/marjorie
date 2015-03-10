@@ -11,7 +11,8 @@
 
     .form-group
       = form.label :content
-      = form.text_area :content, id: 'content'
+      #content= @essay.content
+      = form.text_area :content
 
     .form-group
       = form.submit 'Save', class: 'btn btn-default'
