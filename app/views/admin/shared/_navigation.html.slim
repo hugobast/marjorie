@@ -1,21 +1,9 @@
-nav.navbar.navbar-inverse.navbar-static-top role="navigation"
-  .container-fluid
-    .navbar-header
-      button.navbar-toggle data-target="#toggle-navigation" data-toggle="collapse" type="button"
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
+nav role="navigation"
+  = link_to 'M', admin_root_path, class: :logo
 
-      = link_to 'Le Beau Jour', admin_root_path, class: 'navbar-brand'
+  ul
+    li= link_to 'Dashboard', admin_root_path
+    li= link_to 'Essays', admin_essays_path
+    li.right= link_to 'Sign Out', destroy_user_session_path, method: :delete
 
-    #toggle-navigation.collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li.active
-          = link_to 'Dashboard', admin_root_path
-        li
-          = link_to 'Essays', admin_essays_path
 
-      ul.nav.navbar-nav.navbar-right
-        li
-          = link_to 'Sign Out', destroy_user_session_path, method: :delete

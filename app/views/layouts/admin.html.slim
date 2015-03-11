@@ -6,8 +6,7 @@ html
     = javascript_include_tag '//use.typekit.net/iel2qll.js'
     = csrf_meta_tags
   body
-    - if current_user
-      = render 'admin/shared/navigation'
+    = render 'admin/shared/navigation'
 
     .container
       = render 'admin/shared/messages'
