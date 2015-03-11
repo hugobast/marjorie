@@ -1,3 +1,9 @@
+.pen-menu {
+  * {
+    @include box-sizing(content-box)
+  }
+}
+
 .pen {
   font-family: 'fanwood', serif;
   font-size: 16px;
