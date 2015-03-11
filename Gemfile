@@ -11,9 +11,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'slim', '~> 2.0.2'
 gem 'carrierwave', '~> 0.10.0'
 
-gem 'bourbon'
+gem 'bourbon', '~> 4.1.1'
+gem 'neat', '~> 1.7.1'
 gem 'bitters'
-gem 'neat'
 gem 'refills'
 
 gem 'puma'

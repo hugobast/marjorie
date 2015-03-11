@@ -46,8 +46,8 @@ GEM
       bourbon (>= 3.2)
       sass (>= 3.2)
       thor
-    bourbon (4.2.1)
-      sass (~> 3.4)
+    bourbon (4.1.1)
+      sass (~> 3.3)
       thor
     builder (3.2.2)
     byebug (3.5.1)
@@ -232,7 +232,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bitters
-  bourbon
+  bourbon (~> 4.1.1)
   byebug
   capybara-screenshot
   carrierwave (~> 0.10.0)
@@ -245,7 +245,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.3)
   launchy
-  neat
+  neat (~> 1.7.1)
   pg (~> 0.17.1)
   poltergeist
   puma
