@@ -4,6 +4,7 @@
 @import 'pen';
 
 @import 'modules/navigation';
+@import 'modules/editor';
 
 body, html {
   padding: 0; margin: 0;
@@ -13,7 +14,8 @@ body, html {
   @include outer-container;
 
   form {
-    @include span-columns(12);
+    @include shift(1);
+    @include span-columns(10);
   }
 }
 
