@@ -1,0 +1,53 @@
+$navigation-padding: 1rem;
+$navigation-background: $dark-gray;
+$navigation-color: transparentize(white, 0.3);
+$navigation-color-hover: white;
+$navigation-height: 60px;
+
+$navigation-logo-font: 'learning-curve';
+$navigation-logo-font-size: 40px;
+
+nav {
+  background-color: $navigation-background;
+  min-height: $navigation-height;
+  position: relative;
+  width: 100%;
+
+  .logo {
+    float: left;
+    font-family: $navigation-logo-font, cursive;
+    font-size: $navigation-logo-font-size;
+    line-height: $navigation-height;
+
+    padding-left: $navigation-padding;
+    padding-right: 2rem;
+
+    color: $navigation-color-hover;
+
+    &:focus, &:hover {
+      color: $navigation-color;
+    }
+  }
+
+  ul {
+    li {
+      display: inline;
+      line-height: $navigation-height;
+      padding-right: 0.8em;
+
+      &.right {
+        float: right;
+      }
+    }
+
+    a {
+      color: $navigation-color;
+
+      padding-right: 1em;
+
+      &:focus, &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+}
