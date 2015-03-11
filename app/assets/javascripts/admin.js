@@ -19,7 +19,6 @@ var options = {
 // create editor
 if ($el.length) {
   var pen = window.pen = new Pen(options);
-  $el.addClass('hinted');
 
   $('form').on('submit', function() {
     $('#essay_content').val(pen.getContent());
