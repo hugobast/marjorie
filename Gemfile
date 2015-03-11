@@ -6,7 +6,6 @@ gem 'devise', '~> 3.4.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.0.3'
-gem 'bower-rails', '~> 0.9.2'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'slim', '~> 2.0.2'
@@ -19,6 +18,11 @@ gem 'refills'
 
 gem 'puma'
 gem 'foreman'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-pen'
+end
+
 
 group :development, :test do
   gem 'dotenv-rails'

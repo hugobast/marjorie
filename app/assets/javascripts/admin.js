@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery_ujs
+//= require pen/markdown
 //= require pen
-//= require pen/src/markdown
 
 try{Typekit.load();}catch(e){}
 
