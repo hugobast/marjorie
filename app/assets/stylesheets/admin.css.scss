@@ -11,6 +11,8 @@ body, html {
 }
 
 .container {
+  padding-top: 4rem;
+
   @include outer-container;
 
   form {

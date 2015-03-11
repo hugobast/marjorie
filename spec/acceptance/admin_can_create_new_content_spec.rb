@@ -28,7 +28,7 @@ feature 'Admin can create new content', %q{
   end
 
   def enter_title(title)
-    fill_in 'Title', with: title
+    fill_in 'essay_title', with: title
   end
 
   def enter_content(content)
