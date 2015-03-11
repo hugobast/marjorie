@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.0'
 gem 'pg', '~> 0.17.1'
-gem 'devise', '~> 3.2.4'
+gem 'devise', '~> 3.4.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails', '~> 3.1.0'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails', '~> 4.0.3'
 gem 'bower-rails', '~> 0.9.2'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
@@ -20,13 +20,11 @@ gem 'refills'
 gem 'puma'
 gem 'foreman'
 
-group :development do
-  gem 'spring'
-end
-
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'pry'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
 end
 
 group :test do
