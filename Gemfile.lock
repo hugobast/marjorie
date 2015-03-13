@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/seuros/state_machine.git
+  revision: b5baef856b170f18dc2fdc36def2411c255335b9
+  specs:
+    state_machine (1.2.0)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -254,6 +260,7 @@ DEPENDENCIES
   refills
   slim (~> 2.0.2)
   spring
+  state_machine!
   steak
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

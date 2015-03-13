@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'slim', '~> 2.0.2'
 gem 'carrierwave', '~> 0.10.0'
+gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
 
 gem 'bourbon', '~> 4.1.1'
 gem 'neat', '~> 1.7.1'
