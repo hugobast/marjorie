@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       root to: 'dashboard#show'
 
       resources :essays
+      resources :images
     end
   end
 

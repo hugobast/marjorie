@@ -1,0 +1,5 @@
+= form_for [:admin, @image] do |form|
+  = form.label :image_file
+  = form.file_field :image_file
+
+  = form.submit 'Save'
