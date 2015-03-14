@@ -1,7 +1,9 @@
-@import 'bourbon';
-@import 'base/base';
-@import 'neat';
 @import 'pen';
+@import 'bourbon';
+@import 'neat';
+
+@import 'base/base';
+@import 'refills/flashes';
 
 @import 'modules/navigation';
 @import 'modules/editor';
