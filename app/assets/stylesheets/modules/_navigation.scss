@@ -1,17 +1,20 @@
 $navigation-padding: 1rem;
-$navigation-background: $dark-gray;
-$navigation-color: transparentize(white, 0.3);
-$navigation-color-hover: white;
-$navigation-height: 60px;
+$navigation-background: white;
+$navigation-color: transparentize($dark-gray, 0.3);
+$navigation-border-color: darken($navigation-background, 30);
+$navigation-color-hover: $dark-gray;
 
 $navigation-logo-font: 'learning-curve';
 $navigation-logo-font-size: 40px;
 
 nav {
   background-color: $navigation-background;
+  border-bottom: 1px solid $navigation-border-color;
+  box-shadow: 1px 1px 1px $navigation-border-color;
   min-height: $navigation-height;
-  position: relative;
+  position: fixed;
   width: 100%;
+  z-index: 9999;
 
   .logo {
     float: left;
