@@ -14,7 +14,7 @@ else
       aws_secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
     }
 
-    config.fog_public = false
+    config.fog_public = true
     config.fog_directory = ENV.fetch('S3_BUCKET_NAME')
     config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" }
   end
