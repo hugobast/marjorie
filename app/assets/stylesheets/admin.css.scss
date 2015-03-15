@@ -12,6 +12,8 @@ $actions-width: 200px;
 @import 'modules/navigation';
 @import 'modules/editor';
 
+@import 'specifics/essays';
+
 
 body, html {
   padding: 0; margin: 0;
@@ -23,6 +25,15 @@ body, html {
   position: fixed;
   top: $navigation-height;
   width: $actions-width;
+  text-align: center;
+
+  a {
+    margin-bottom: 1rem;
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
 }
 
 .container {

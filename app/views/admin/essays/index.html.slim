@@ -1,7 +1,8 @@
 .essays
-  table.table.table-striped.table-hover
-    - @essays.each do |essay|
-      tr
-        td= essay.id
-        td= link_to essay.title, admin_essay_path(essay)
-        td= link_to 'edit', edit_admin_essay_path(essay)
+  - @essays.each do |essay|
+    .essay
+      h2= link_to essay.title, admin_essay_path(essay)
+      p= truncate strip_tags(essay.content), length: 200
+
+  = content_for :actions
+    = link_to 'Create Essay', new_admin_essay_path
