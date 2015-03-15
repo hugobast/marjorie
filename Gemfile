@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'slim', '~> 2.0.2'
 gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.1.0'
 gem 'fog', '~> 1.28.0'
 gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
 
