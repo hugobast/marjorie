@@ -30,6 +30,11 @@ body, html {
   padding-top: 5rem;
   margin-left: $actions-width;
 
+  .flashes {
+    @include shift(1);
+    @include span-columns(8);
+  }
+
   .essays {
     margin-top: $navigation-height;
     @include shift(1);
