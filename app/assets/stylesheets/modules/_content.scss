@@ -1,0 +1,24 @@
+@mixin body-content() {
+  font-family: 'clavo', serif;
+  font-size: 13px;
+  font-weight: 300;
+
+  p {
+    color: black;
+    line-height: 1.4rem;
+  }
+}
+
+@mixin title-content() {
+  box-shadow: none;
+  border: none;
+  background: none;
+  text-align: center;
+  font-family: 'adelle-sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

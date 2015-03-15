@@ -26,13 +26,21 @@ body, html {
 
 .container {
   @include outer-container;
+  padding-top: 5rem;
   margin-left: $actions-width;
 
-  .main {
+  > div {
     margin-top: $navigation-height;
-    padding-top: 5rem;
     @include shift(1);
     @include span-columns(8);
+
+    h1 {
+      @include title-content;
+    }
+
+    article {
+      @include body-content;
+    }
   }
 }
 
