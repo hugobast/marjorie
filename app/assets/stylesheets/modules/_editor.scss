@@ -6,12 +6,12 @@
 
 .editor {
   .pen {
-    font-family: 'fanwood', serif;
-    font-size: 16px;
+    font-family: 'clavo', serif;
+    font-size: 14px;
+    font-weight: 300;
 
     p {
       color: black;
-      padding: 1rem;
       line-height: 1.5rem;
     }
   }
@@ -21,6 +21,9 @@
     border: none;
     background: none;
     text-align: center;
+    font-family: 'adelle-sans', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
 
     &:focus {
       box-shadow: none;
