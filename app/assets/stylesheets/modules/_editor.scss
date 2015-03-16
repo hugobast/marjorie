@@ -8,10 +8,15 @@
 
 .editor {
   .pen {
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
     @include body-content;
   }
 
   .title {
+    background: lighten($light-gray, 10);
     @include title-content;
   }
 }

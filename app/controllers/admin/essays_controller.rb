@@ -23,7 +23,7 @@ module Admin
     end
 
     def new
-      @essay = Essay.new
+      @essay = Essay.new content: '<p>Put your text here...</p>'
     end
 
     def create
