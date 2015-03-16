@@ -27,7 +27,7 @@ feature 'Admin can insert images in essays', %q{
     save!
 
     expect(page).to have_selector "img[src='#{image.image_file_url(:large)}']"
-    expect(page).to have_content('Essay was saved successfully')
+    expect(page).to have_content('Essay was created successfully')
   end
 
   def enter_title(title)

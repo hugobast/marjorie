@@ -3,7 +3,7 @@ $el = $ '#content'
 if $el.length
   options =
     editor: $el[0],
-    debug: true,
+    stay: false,
     list: [
       'bold', 'italic', 'underline', 'blockquote', 'insertorderedlist', 'insertunorderedlist',
       'inserthorizontalrule', 'indent', 'outdent', 'createlink', 'insertimage'

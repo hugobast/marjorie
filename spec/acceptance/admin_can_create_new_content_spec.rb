@@ -24,7 +24,7 @@ feature 'Admin can create new content', %q{
       save!
     end
 
-    expect(page).to have_content('Essay was saved successfully')
+    expect(page).to have_content('Essay was created successfully')
   end
 
   def enter_title(title)

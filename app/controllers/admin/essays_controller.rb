@@ -11,21 +11,28 @@ module Admin
 
     def edit; end
 
-    def update
-      if @essay.update_attributes(essay_params)
-        redirect_to admin_essay_path(@essay), flash: { success: 'Essay was saved successfully' }
-      else
-        redirect_to edit_admin_essay_path(@essay), flash: { error: 'Essay failed to save' }
-      end
-    end
-
     def new
       @essay = Essay.new content: '<p>Put your text here...</p>'
     end
 
+    def update
+      Essay::Update.new(self).call @essay, essay_params
+    end
+
     def create
-      @essay = Essay.create!(essay_params)
-      redirect_to [:admin, @essay], notice: 'Essay was saved successfully'
+      Essay::Create.new(self).call essay_params
+    end
+
+    def updated_successfully
+      redirect_to [:admin, @essay], notice: 'Essay was updated successfully'
+    end
+
+    def created_successfully(essay)
+      redirect_to [:admin, essay], notice: 'Essay was created successfully'
+    end
+
+    def update_failed
+      redirect_to [:admin, @essay], flash: { error: 'Essay failed to save' }
     end
 
     private

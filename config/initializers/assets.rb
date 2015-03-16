@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w(admin.css admin.js.coffee)
+Rails.application.config.assets.precompile += %w(admin.css admin.js)
