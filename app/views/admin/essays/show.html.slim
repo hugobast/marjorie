@@ -4,3 +4,7 @@
   article
     = raw @essay.content
 
+
+= content_for :actions do
+  = link_to 'Edit Essay', edit_admin_essay_path(@essay)
+
