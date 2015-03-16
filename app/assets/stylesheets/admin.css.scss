@@ -45,19 +45,5 @@ body, html {
     @include shift(1);
     @include span-columns(8);
   }
-
-  .essays {
-    margin-top: $navigation-height;
-    @include shift(1);
-    @include span-columns(8);
-
-    h1 {
-      @include title-content;
-    }
-
-    article {
-      @include body-content;
-    }
-  }
 }
 

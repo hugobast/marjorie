@@ -1,7 +1,22 @@
-.essay {
-  background: lighten($light-gray, 10);
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
-  padding: 1rem;
-  margin-bottom: 1rem;
+.essays {
+  margin-top: $navigation-height;
+  margin-bottom: $navigation-height;
+  @include shift(1);
+  @include span-columns(8);
+
+  .essay {
+    background: lighten($light-gray, 10);
+    border-radius: $base-border-radius;
+    box-shadow: $form-box-shadow;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    @include title-content;
+  }
+
+  article {
+    @include body-content;
+  }
 }
