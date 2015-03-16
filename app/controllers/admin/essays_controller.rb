@@ -1,20 +1,17 @@
 module Admin
   class EssaysController < AdminController
+    before_action :load_images, only: %i(new edit)
+    before_action :find_essay, only: %i(show edit update)
+
     def index
       @essays = Essay.all
     end
 
-    def show
-      @essay = Essay.find(params[:id])
-    end
+    def show; end
 
-    def edit
-      @essay = Essay.find(params[:id])
-    end
+    def edit; end
 
     def update
-      @essay = Essay.find(params[:id])
-
       if @essay.update_attributes(essay_params)
         redirect_to admin_essay_path(@essay), flash: { success: 'Essay was saved successfully' }
       else
@@ -35,6 +32,14 @@ module Admin
 
     def essay_params
       params.require(:essay).permit(:title, :content, :image)
+    end
+
+    def find_essay
+      @essay ||= Essay.find params[:id]
+    end
+
+    def load_images
+      @images ||= Image.sorted
     end
   end
 end
