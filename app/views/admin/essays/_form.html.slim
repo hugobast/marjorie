@@ -1,12 +1,4 @@
-nav.js-menu.sliding-menu-content
-  ul.images
-    - @images.each do |image|
-      li
-        = link_to '#', class: 'insert-image', 'data-image' => image.image_file_url(:large) do
-          = image_tag image.image_file_url :small
-
-.js-menu-screen.sliding-menu-fade-screen
-
+= render partial: 'admin/shared/gallery'
 
 = form_for [:admin, @essay], { html: { class: 'editor' } } do |form|
   = form.hidden_field :content
