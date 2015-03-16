@@ -7,10 +7,9 @@ $navigation-color-hover: $dark-gray;
 $navigation-logo-font: 'learning-curve';
 $navigation-logo-font-size: 40px;
 
-nav {
+.navigation {
   background-color: $navigation-background;
   border-bottom: 1px solid $navigation-border-color;
-  box-shadow: 1px 1px 1px $navigation-border-color;
   min-height: $navigation-height;
   position: fixed;
   width: 100%;

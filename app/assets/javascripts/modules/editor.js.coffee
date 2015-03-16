@@ -13,3 +13,8 @@ if $el.length
 
   $('form').on 'submit', ->
     $('#essay_content').val pen.getContent()
+
+  $('.insert-image').on 'click', (event) ->
+    pen.focus()
+    pen.execCommand('insertImage', $(@).data('image'))
+    event.preventDefault()
