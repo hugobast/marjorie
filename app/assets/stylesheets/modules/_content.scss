@@ -1,11 +1,41 @@
 @mixin body-content() {
+  color: $dark-gray;
   font-family: 'clavo', serif;
   font-size: 13px;
   font-weight: 300;
 
   p {
-    color: black;
     line-height: 1.4rem;
+
+    b, strong {
+      font-weight: 500;
+    }
+
+    i, em {
+      font-style: italic;
+    }
+  }
+
+  a {
+    color: $dark-blue;
+
+    &:hover {
+      color: lighten($dark-blue, 10);
+    }
+  }
+
+  ul {
+    list-style: disc outside;
+  }
+
+  ol {
+    list-style: decimal outside;
+  }
+
+  blockquote {
+    border-left: 1px solid $light-gray;
+    margin-left: 0;
+    padding-left: 1em;
   }
 }
 

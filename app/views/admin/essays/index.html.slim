@@ -3,6 +3,8 @@
     .essay
       h2= link_to essay.title, admin_essay_path(essay)
       p= truncate strip_tags(essay.content), length: 200
+      div
+        span.badge-notice= essay.state
 
-  = content_for :actions
-    = link_to 'Create Essay', new_admin_essay_path
+= content_for :actions
+  = link_to 'Create Essay', new_admin_essay_path

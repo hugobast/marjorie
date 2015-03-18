@@ -5,11 +5,14 @@
   @include span-columns(8);
 
   .essay {
-    background: lighten($light-gray, 10);
-    border-radius: $base-border-radius;
-    box-shadow: $form-box-shadow;
-    padding: 1rem;
+    background: white;
+    border-bottom: 1px solid $light-gray;
     margin-bottom: 1rem;
+    padding: 1rem;
+
+    &:last-child {
+      border: none;
+    }
   }
 
   h1 {
