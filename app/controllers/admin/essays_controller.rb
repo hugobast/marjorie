@@ -1,7 +1,7 @@
 module Admin
   class EssaysController < AdminController
     before_action :load_images, only: %i(new edit)
-    before_action :find_essay, only: %i(show edit update)
+    before_action :find_essay, only: %i(show edit update publish)
 
     def index
       @essays = Essay.all
@@ -21,6 +21,12 @@ module Admin
 
     def create
       Essay::Create.new(self).call essay_params
+    end
+
+    def publish
+      @essay.drafted? ? @essay.publish! : @essay.draft!
+
+      redirect_to :back
     end
 
     def updated_successfully

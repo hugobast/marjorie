@@ -7,6 +7,7 @@ class Essay < ActiveRecord::Base
 
   state_machine initial: :drafted do
     transition drafted: :published, on: :publish
+    transition published: :drafted, on: :draft
 
     after_transition drafted: :published, do: :mark_published
   end

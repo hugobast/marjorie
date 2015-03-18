@@ -1,4 +1,7 @@
 .essays
+  div
+    span.badge-notice= @essay.state
+
   h1
     = @essay.title
   article
@@ -7,4 +10,7 @@
 
 = content_for :actions do
   = link_to 'Edit Essay', edit_admin_essay_path(@essay)
-
+  - if @essay.drafted?
+    = link_to 'Publish', publish_admin_essay_path(@essay), method: :put
+  - else
+    = link_to 'Unpublish', publish_admin_essay_path(@essay), method: :put

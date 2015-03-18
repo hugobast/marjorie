@@ -1,18 +1,13 @@
 @import 'pen';
 @import 'bourbon';
 @import 'neat';
-
 @import 'base/base';
-@import 'refills/flashes';
+@import 'refills/badges';
 @import 'refills/cards';
+@import 'refills/flashes';
 @import 'refills/sliding-menu';
-
-$navigation-height: 60px;
-$actions-width: 200px;
-
 @import 'modules/navigation';
 @import 'modules/editor';
-
 @import 'specifics/essays';
 
 
@@ -29,7 +24,8 @@ body, html {
   text-align: center;
 
   a {
-    margin-bottom: 1rem;
+    display: block;
+    margin: 1rem;
 
     &:first-child {
       margin-top: 1rem;
