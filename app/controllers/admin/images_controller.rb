@@ -14,6 +14,13 @@ module Admin
       redirect_to action: :index
     end
 
+    def destroy
+      image = Image.find params[:id]
+      image.destroy!
+
+      redirect_to admin_images_path, flash: { success: 'Image was removed.' }
+    end
+
     private
 
     def image_params

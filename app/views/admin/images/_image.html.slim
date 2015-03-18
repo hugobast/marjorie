@@ -1,4 +1,6 @@
 .card
   .card-image.image
     = image_tag image.image_file_url :small
-  .card-copy Name of the image
+  .card-copy
+    = link_to 'Remove', admin_image_path(image),
+      confirm: 'Are you sure?', method: :delete
