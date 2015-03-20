@@ -1,4 +1,12 @@
 @import 'bourbon';
-@import 'application/fonts';
-@import 'application/header';
-@import 'application/layout';
+@import 'neat';
+@import 'base/base';
+@import 'modules/content';
+
+h1 {
+  @include title-content;
+}
+
+article {
+  @include body-content;
+}
