@@ -3,10 +3,77 @@
 @import 'base/base';
 @import 'modules/content';
 
-h1 {
-  @include title-content;
+$container-top-margin: 10rem;
+$container-left-margin: 10rem;
+
+body, html {
+  padding: 0; margin: 0;
 }
 
-article {
-  @include body-content;
+.container {
+  @include outer-container;
+  margin-left: 0;
+  margin-top: $container-top-margin;
+
+  .essays {
+    @include span-columns(7);
+    margin-left: $container-left-margin;
+
+    .essay {
+      @include body-content;
+
+      header {
+        @include clearfix;
+
+        .essay-title {
+          @include span-columns(5 of 7);
+          @include title-content;
+        }
+
+        .essay-date {
+          @include span-columns(2 of 7);
+
+          color: $light-gray;
+          font-family: 'adelle-sans', sans-serif;
+          line-height: 2rem;
+          text-align: right;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  @include outer-container;
+
+  background-color: white;
+  font-family: 'adelle-sans', sans-serif;
+  font-size: 0.9rem;
+  margin-left: 0;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+
+  ul {
+    @include clearfix;
+    @include span-columns(7);
+
+    margin-left: $container-left-margin;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    li {
+      float: left;
+      margin-right: 1rem;
+
+      a {
+        color: lighten($dark-gray, 60);
+        text-transform: lowercase;
+
+        &:hover {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
 }

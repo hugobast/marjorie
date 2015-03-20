@@ -4,6 +4,8 @@
   font-size: 13px;
   font-weight: 300;
 
+  margin-bottom: 10rem;
+
   p {
     line-height: 1.4rem;
 
@@ -42,10 +44,11 @@
 @mixin title-content() {
   box-shadow: none;
   border: none;
-  text-align: center;
   font-family: 'adelle-sans', sans-serif;
-  font-size: 22px;
+  font-size: 1rem;
   font-weight: 300;
+  line-height: 2rem;
+  margin-bottom: 3rem;
 
   &:focus {
     box-shadow: none;
