@@ -65,7 +65,7 @@ nav {
 
     .logo {
       font-family: 'learning-curve', cursive;
-      font-size: 3rem;
+      font-size: 1.8rem;
       margin-right: 2rem;
     }
 
@@ -76,7 +76,6 @@ nav {
 
       a {
         color: lighten($dark-gray, 60);
-        text-transform: lowercase;
 
         &:hover {
           color: $dark-gray;
