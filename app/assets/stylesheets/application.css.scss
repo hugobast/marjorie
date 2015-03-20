@@ -2,6 +2,7 @@
 @import 'neat';
 @import 'base/base';
 @import 'modules/content';
+@import 'modules/social_fonts';
 
 $container-top-margin: 10rem;
 $container-left-margin: 10rem;
@@ -62,9 +63,16 @@ nav {
     padding-top: 1rem;
     padding-bottom: 1rem;
 
+    .logo {
+      font-family: 'learning-curve', cursive;
+      font-size: 3rem;
+      margin-right: 2rem;
+    }
+
     li {
       float: left;
       margin-right: 1rem;
+      line-height: 1rem;
 
       a {
         color: lighten($dark-gray, 60);

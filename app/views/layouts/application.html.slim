@@ -10,11 +10,18 @@ html
   body
     nav
       ul
+        li= link_to 'm', root_path, class: :logo
         li= link_to 'About', '#'
         li= link_to 'Section', '#'
-        li= link_to 'Section 2', '#'
-        li= link_to 'Section 3', '#'
-        li= link_to 'Section 4', '#'
+
+        li= link_to '#' do
+          span.symbol &#xe286;
+
+        li= link_to '#' do
+          span.symbol &#xe300;
+
+        li= link_to '#' do
+          span.symbol &#xe264;
 
     .container
       = yield
