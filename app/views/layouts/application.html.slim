@@ -12,16 +12,19 @@ html
       ul
         li= link_to 'Le beau jour', root_path, class: :logo
         li= link_to 'about', '#'
-        li= link_to 'section', '#'
+        li= link_to 'images', '#'
+        li= link_to 'stuff', '#'
+        li= link_to 'food', '#'
 
-        li= link_to '#' do
-          span.symbol &#xe286;
+        ul.social
+          li= link_to '#' do
+            span.symbol &#xe286;
 
-        li= link_to '#' do
-          span.symbol &#xe300;
+          li= link_to '#' do
+            span.symbol &#xe300;
 
-        li= link_to '#' do
-          span.symbol &#xe264;
+          li= link_to '#' do
+            span.symbol &#xe264;
 
     .container
       = yield

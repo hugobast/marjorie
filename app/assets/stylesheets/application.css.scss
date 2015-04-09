@@ -5,7 +5,7 @@
 @import 'modules/social_fonts';
 
 $container-top-margin: 10rem;
-$container-left-margin: 10rem;
+$container-left-margin: 15rem;
 
 body, html {
   padding: 0; margin: 0;
@@ -46,40 +46,43 @@ body, html {
 }
 
 nav {
-  @include outer-container;
-
-  background-color: white;
   font-family: 'adelle-sans', sans-serif;
   font-size: 0.9rem;
-  margin-left: 0;
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: $container-top-margin; left: 0;
+  width: $container-left-margin;
 
   ul {
     @include clearfix;
-    @include span-columns(7);
 
-    margin-left: $container-left-margin;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 0 2rem 2rem;
 
     .logo {
       font-family: 'learning-curve', cursive;
       font-size: 1.8rem;
-      margin-right: 2rem;
     }
 
     li {
-      float: left;
-      margin-right: 1rem;
-      line-height: 1rem;
-
       a {
         color: lighten($dark-gray, 60);
 
         &:hover {
           color: $dark-gray;
         }
+      }
+
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .social {
+      margin-top: 1rem;
+      padding-left: 0;
+
+      li {
+        float: left;
+        margin-right: 0.5rem;
       }
     }
   }
