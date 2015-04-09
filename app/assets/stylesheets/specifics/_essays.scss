@@ -1,9 +1,4 @@
 .essays {
-  margin-top: $navigation-height;
-  margin-bottom: $navigation-height;
-  @include shift(1);
-  @include span-columns(8);
-
   .essay {
     background: white;
     border-bottom: 1px solid $light-gray;
