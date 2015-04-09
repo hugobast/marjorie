@@ -14,15 +14,17 @@ feature 'Admin can upload images', %q{
   scenario do
     visit admin_images_path
     click_on 'Upload Image'
-    attach_image_to_form_and_save
+
+    attach_image_to_form
+    fill_in 'image[title]', with: 'Lorem Ipsum'
+
+    click_button 'Save'
 
     expect_to_see_one_image
   end
 
-  def attach_image_to_form_and_save
+  def attach_image_to_form
     attach_file 'Image file', 'spec/fixtures/file.png'
-
-    click_button 'Save'
   end
 
   def expect_to_see_one_image

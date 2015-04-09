@@ -1,4 +1,6 @@
 = form_for [:admin, @image] do |form|
+  = form.text_field :title, class: 'title', placeholder: 'Put your title here...'
+
   = form.label :image_file
   = form.file_field :image_file
 
