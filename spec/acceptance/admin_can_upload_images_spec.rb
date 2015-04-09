@@ -12,7 +12,8 @@ feature 'Admin can upload images', %q{
   end
 
   scenario do
-    visit new_admin_image_path
+    visit admin_images_path
+    click_on 'Upload Image'
     attach_image_to_form_and_save
 
     expect_to_see_one_image

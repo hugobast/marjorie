@@ -1,2 +1,5 @@
 .cards
   = render @images
+
+= content_for :actions
+  = link_to 'Upload Image', new_admin_image_path
