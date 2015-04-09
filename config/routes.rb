@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :essays, only: :show
+
   root to: 'home#index'
 end

@@ -12,6 +12,7 @@ gem 'slim', '~> 2.0.2'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.1.0'
 gem 'fog', '~> 1.28.0'
+gem 'friendly_id', '~> 5.1.0'
 gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
 
 gem 'bourbon', '~> 4.1.1'

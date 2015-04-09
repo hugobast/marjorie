@@ -1,4 +1,7 @@
 class Essay < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   class << self
     def sorted
       order published_at: :desc

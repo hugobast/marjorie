@@ -1,0 +1,6 @@
+section.essays
+  article.essay
+    header
+      h1.essay-title= @essay.title
+      .essay-date= l @essay.published_at, format: :day_of_the_week
+    .essay-content= raw @essay.content
