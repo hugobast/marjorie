@@ -1,9 +1,21 @@
+$title-height: 1.6rem;
+$title-line-height: 2.3rem;
+
 .essays {
   .essay {
     background: white;
     border-bottom: 1px solid $light-gray;
     margin-bottom: 1rem;
     padding: 1rem;
+
+    h2 {
+      line-height: $title-height;
+      padding-bottom: $title-height;
+    }
+
+    .right {
+      float: right;
+    }
 
     &:last-child {
       border: none;
@@ -16,5 +28,9 @@
 
   article {
     @include body-content;
+  }
+
+  .normal-margin-bottom {
+    margin-bottom: 1rem;
   }
 }

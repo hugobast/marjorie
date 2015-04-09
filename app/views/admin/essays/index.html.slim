@@ -1,10 +1,11 @@
 .essays
   - @essays.each do |essay|
     .essay
-      h2= link_to essay.title, admin_essay_path(essay)
-      p= truncate strip_tags(essay.content), length: 200
-      div
-        span.badge-notice= essay.state
+      h1
+        = link_to essay.title, admin_essay_path(essay)
+        .right.badge-notice= essay.state
+      article.normal-margin-bottom
+        = truncate strip_tags(essay.content), length: 400
 
 = content_for :actions
   = link_to 'Create Essay', new_admin_essay_path

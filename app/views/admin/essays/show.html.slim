@@ -1,11 +1,10 @@
 .essays
-  div
-    span.badge-notice= @essay.state
-
-  h1
-    = @essay.title
-  article
-    = raw @essay.content
+  .essay
+    h1
+      = @essay.title
+      .right.badge-notice= @essay.state
+    article
+      = raw @essay.content
 
 
 = content_for :actions do
