@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :sections, only: %w(index show) do
+    resources :essays, only: :show
+  end
+
   resources :essays, only: :show
 
   root to: 'home#index'

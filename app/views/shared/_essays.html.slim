@@ -1,0 +1,7 @@
+section.essays
+  - @essays.each do |essay|
+    article.essay
+      header
+        h1.essay-title= link_to essay.title, essay
+        .essay-date= l essay.published_at, format: :day_of_the_week
+      .essay-content= raw essay.content
