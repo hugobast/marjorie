@@ -4,6 +4,8 @@ html
     title Admin - Marjorie
     = stylesheet_link_tag 'admin', media: 'all'
     = javascript_include_tag '//use.typekit.net/iel2qll.js'
+    javascript:
+      try{Typekit.load();}catch(e){}
     = csrf_meta_tags
   body
     = render 'admin/shared/navigation'

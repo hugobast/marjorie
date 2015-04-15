@@ -5,6 +5,5 @@
 
 #= require refills/sliding_menu
 
-#= require modules/typekit
 #= require modules/editor
 
