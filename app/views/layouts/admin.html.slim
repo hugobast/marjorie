@@ -8,8 +8,9 @@ html
       try{Typekit.load();}catch(e){}
     = csrf_meta_tags
   body
-    = render 'admin/shared/navigation'
-    = render 'admin/shared/actions'
+    - if current_user
+      = render 'admin/shared/navigation'
+      = render 'admin/shared/actions'
 
     .container
       = render 'admin/shared/messages'
