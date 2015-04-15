@@ -44,7 +44,7 @@ module Admin
     private
 
     def essay_params
-      params.require(:essay).permit(:title, :content, :image)
+      params.require(:essay).permit :title, :content, :image, :section_id
     end
 
     def find_essay

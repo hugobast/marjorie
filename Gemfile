@@ -14,6 +14,7 @@ gem 'mini_magick', '~> 4.1.0'
 gem 'fog', '~> 1.28.0'
 gem 'friendly_id', '~> 5.1.0'
 gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
+gem 'formtastic'
 
 gem 'bourbon', '~> 4.1.1'
 gem 'neat', '~> 1.7.1'

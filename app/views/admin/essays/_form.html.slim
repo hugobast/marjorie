@@ -1,12 +1,13 @@
 = render partial: 'admin/shared/gallery'
 
-= form_for [:admin, @essay], { html: { class: 'editor' } } do |form|
-  = form.hidden_field :content
-  = form.text_field :title, class: 'title', placeholder: 'Put your title here...'
+= semantic_form_for [:admin, @essay], { html: { class: 'editor' } } do |form|
+  = form.input :content, as: :hidden
+  = form.input :title, label: false, placeholder: 'Put your title here...'
+  = form.input :section, as: :select
 
   #content= raw @essay.content
 
-  = form.submit 'Save'
+  = form.action :submit, label: 'Save'
 
 = content_for :actions do
   = link_to 'Insert Image', '#', class: 'action js-menu-trigger sliding-menu-button'

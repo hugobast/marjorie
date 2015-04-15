@@ -10,7 +10,7 @@ table.table-minimal
     - @sections.each do |section|
       tr
         td= section.name
-        td sections.essays.count
+        td= section.essays.count
         td
           = link_to 'Edit', edit_admin_section_path(section), class: :button
           = link_to 'Remove', admin_section_path(section), class: :button, data: { confirm: 'Are you sure?' }, method: :delete

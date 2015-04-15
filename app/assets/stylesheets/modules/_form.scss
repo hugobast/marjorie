@@ -1,5 +1,6 @@
 form {
-  .title {
+  input[name='essay[title]'] {
     background: lighten($light-gray, 10);
+    @include title-content;
   }
 }
