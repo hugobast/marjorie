@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       end
 
       resources :images
+      resources :sections
     end
   end
 

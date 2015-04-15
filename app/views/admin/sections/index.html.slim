@@ -1,0 +1,20 @@
+table.table-minimal
+  thead
+    tr
+      th Name
+      th Essay Count
+      th Actions
+
+
+  tbody
+    - @sections.each do |section|
+      tr
+        td= section.name
+        td sections.essays.count
+        td
+          button Edit
+          button Delete
+
+= content_for :actions
+  = link_to 'Create Section', new_admin_section_path
+

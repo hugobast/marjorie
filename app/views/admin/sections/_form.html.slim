@@ -1,0 +1,4 @@
+= form_for [:admin, @section] do |form|
+  = form.text_field :name, class: 'name', placeholder: 'Put your section name here...'
+
+  = form.submit 'Save'
