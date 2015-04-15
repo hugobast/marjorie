@@ -59,12 +59,12 @@ nav {
 
     .logo {
       font-family: 'learning-curve', cursive;
-      font-size: 1.8rem;
+      font-size: 3rem;
     }
 
     li {
       a {
-        color: lighten($dark-gray, 60);
+        color: lighten($dark-gray, 30);
 
         &:hover {
           color: $dark-gray;

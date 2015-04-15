@@ -1,7 +1,7 @@
 @mixin body-content() {
-  color: $dark-gray;
+  color: black;
   font-family: 'clavo', serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 
   margin-bottom: 10rem;
@@ -10,7 +10,6 @@
     line-height: 1.4rem;
 
     b, strong {
-      font-weight: 500;
     }
 
     i, em {
@@ -19,10 +18,11 @@
   }
 
   a {
-    color: $dark-blue;
+    color: black;
+    font-weight: 500;
 
     &:hover {
-      color: lighten($dark-blue, 10);
+      color: lighten(black, 10);
     }
   }
 
