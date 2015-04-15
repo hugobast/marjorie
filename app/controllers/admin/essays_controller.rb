@@ -48,7 +48,7 @@ module Admin
     end
 
     def find_essay
-      @essay ||= Essay.find params[:id]
+      @essay ||= Essay.friendly.find params[:id]
     end
 
     def load_images
