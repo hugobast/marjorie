@@ -13,7 +13,7 @@ table.table-minimal
         td sections.essays.count
         td
           = link_to 'Edit', edit_admin_section_path(section), class: :button
-          button Delete
+          = link_to 'Remove', admin_section_path(section), class: :button, data: { confirm: 'Are you sure?' }, method: :delete
 
 = content_for :actions
   = link_to 'Create Section', new_admin_section_path

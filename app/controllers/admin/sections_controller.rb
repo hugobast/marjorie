@@ -25,6 +25,13 @@ module Admin
       redirect_to({ action: :index }, notice: 'Section was updated successfully')
     end
 
+    def destroy
+      section = Section.friendly.find params[:id]
+      section.destroy
+
+      redirect_to({ action: :index }, notice: 'Section was removed')
+    end
+
     private
 
     def section_params
