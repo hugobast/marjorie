@@ -4,7 +4,7 @@ module Admin
     before_action :find_essay, only: %i(show edit update publish)
 
     def index
-      @essays = Essay.all
+      @essays = Essay.sorted
     end
 
     def show; end
