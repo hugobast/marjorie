@@ -6,7 +6,7 @@ if $el.length
     stay: false,
     list: [
       'bold', 'italic', 'underline', 'blockquote', 'insertorderedlist', 'insertunorderedlist',
-      'inserthorizontalrule', 'indent', 'outdent', 'createlink', 'insertimage'
+      'inserthorizontalrule', 'indent', 'outdent', 'createlink'
     ]
 
   pen = window.pen = new Pen options

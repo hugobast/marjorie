@@ -5,6 +5,12 @@
   font-weight: 300;
 
   margin-bottom: 10rem;
+  
+  img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 66%;
+  }
 
   p {
     line-height: 1.4rem;
@@ -15,6 +21,12 @@
     i, em {
       font-style: italic;
     }
+  }
+
+  hr {
+    border: 0;
+    background: image_url('separator.png') no-repeat center center;
+    height: 24px;
   }
 
   a {
