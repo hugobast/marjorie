@@ -8,10 +8,21 @@ module Admin
       @section = Section.new
     end
 
+    def edit
+      @section = Section.friendly.find params[:id]
+    end
+
     def create
       Section.create! section_params
 
       redirect_to({ action: :index }, notice: 'Section was created successfully')
+    end
+
+    def update
+      section = Section.friendly.find params[:id]
+      section.update_attributes! section_params
+
+      redirect_to({ action: :index }, notice: 'Section was updated successfully')
     end
 
     private

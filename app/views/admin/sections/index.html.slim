@@ -12,7 +12,7 @@ table.table-minimal
         td= section.name
         td sections.essays.count
         td
-          button Edit
+          = link_to 'Edit', edit_admin_section_path(section), class: :button
           button Delete
 
 = content_for :actions
