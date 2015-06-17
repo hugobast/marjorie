@@ -1,11 +1,12 @@
 @mixin body-content() {
+  clear: both;
   color: black;
   font-family: 'clavo', serif;
   font-size: 14px;
   font-weight: 300;
 
   margin-bottom: 10rem;
-  
+
   img {
     display: block;
     margin: 2rem auto;

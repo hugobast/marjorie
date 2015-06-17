@@ -13,10 +13,9 @@ body, html {
 
 .banner {
   background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
-  height: $container-top-margin * 2;
-  margin-bottom: $container-top-margin;
+  height: 10rem;
+  margin-bottom: 5rem;
   position: relative;
-  box-shadow: inset 0 -2px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -38,6 +37,15 @@ body, html {
           @include title-content;
         }
       }
+
+      footer {
+        @include shift(2.5);
+        @include span-columns(7);
+
+        background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
+        height: 12px;
+        margin-top: 4rem;
+      }
     }
   }
 }
@@ -50,8 +58,7 @@ nav {
 
   ul {
     .logo {
-      font-variant: small-caps;
-      font-family: 'clavo', serif;
+      font-family: 'freight-big-pro', serif;
       font-weight: 300;
     }
 
