@@ -13,3 +13,30 @@
 @import "lists";
 @import "tables";
 @import "typography";
+
+.website {
+  nav {
+    @include shift(3.5);
+    @include span-columns(5);
+
+    ul {
+      @include clearfix;
+
+      padding: 0 2rem;
+    }
+
+    .logo {
+      color: black;
+      display: inline-block;
+      font-size: 5rem;
+      margin-bottom: 1em;
+    }
+
+    ul.menus {
+      li {
+        display: inline;
+        padding: 1em;
+      }
+    }
+  }
+}

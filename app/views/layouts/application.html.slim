@@ -10,12 +10,18 @@ html
 
     = csrf_meta_tags
 
-  body
+  body.website
+    .banner
+      .left-mask
+      .right-mask
+
     nav
       ul
-        li= link_to 'préface', root_path, class: :logo
-        - @sections.each do |section|
-          li= link_to section.name, section
+        li= link_to 'Marjorie B', root_path, class: :logo
+        li
+          ul.menus
+            - @sections.each do |section|
+              li= link_to section.name, section
 
         ul.social
           li= link_to '#' do

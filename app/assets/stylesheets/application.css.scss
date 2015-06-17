@@ -4,21 +4,29 @@
 @import 'modules/content';
 @import 'modules/social_fonts';
 
-$container-top-margin: 10rem;
+$container-top-margin: 7rem;
 $container-left-margin: 15rem;
 
 body, html {
   padding: 0; margin: 0;
 }
 
+.banner {
+  background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
+  height: $container-top-margin * 2;
+  margin-bottom: $container-top-margin;
+  position: relative;
+  box-shadow: inset 0 -2px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
 .container {
   @include outer-container;
-  margin-left: 0;
-  margin-top: $container-top-margin;
 
   .essays {
+    @include shift(2.5);
     @include span-columns(7);
-    margin-left: $container-left-margin;
+
+    text-align: center;
 
     .essay {
       @include body-content;
@@ -27,18 +35,7 @@ body, html {
         @include clearfix;
 
         .essay-title {
-          @include span-columns(5 of 7);
           @include title-content;
-        }
-
-        .essay-date {
-          @include span-columns(2 of 7);
-
-          color: $light-gray;
-          font-family: 'adelle-sans', sans-serif;
-          line-height: 2rem;
-          text-align: right;
-          text-transform: lowercase;
         }
       }
     }
@@ -48,19 +45,14 @@ body, html {
 nav {
   font-family: 'adelle-sans', sans-serif;
   font-size: 0.9rem;
-  position: fixed;
-  top: $container-top-margin; left: 0;
-  width: $container-left-margin;
+  margin-bottom: $container-top-margin;
+  text-align: center;
 
   ul {
-    @include clearfix;
-
-    padding: 0 2rem 2rem;
-
     .logo {
-      color: black;
-      font-family: 'learning-curve', cursive;
-      font-size: 3rem;
+      font-variant: small-caps;
+      font-family: 'clavo', serif;
+      font-weight: 300;
     }
 
     li {
@@ -71,18 +63,13 @@ nav {
           color: $dark-gray;
         }
       }
-
-      &:first-child {
-        margin-bottom: 1rem;
-      }
     }
 
     .social {
       margin-top: 1rem;
-      padding-left: 0;
 
       li {
-        float: left;
+        display: inline-block;
         margin-right: 0.5rem;
       }
     }
