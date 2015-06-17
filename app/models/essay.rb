@@ -8,6 +8,18 @@ class Essay < ActiveRecord::Base
     def sorted
       order published_at: :desc
     end
+
+    def published
+      where(state: :published)
+    end
+
+    def orphaned
+      where(section: nil)
+    end
+
+    def front_paged
+      published.orphaned.sorted
+    end
   end
 
   state_machine initial: :drafted do

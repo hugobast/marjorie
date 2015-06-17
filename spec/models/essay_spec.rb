@@ -13,6 +13,29 @@ describe Essay do
         expect(described_class.sorted).to eq [first, second, third]
       end
     end
+
+    describe 'front_paged' do
+      subject(:front_paged) { described_class.front_paged }
+
+      context 'given a published essay not in a section' do
+        let!(:essay) { create(:essay, :published, section: nil) }
+
+        subject(:front_paged) { described_class.front_paged }
+
+        it 'contains that item' do
+          expect(front_paged).to include essay
+        end
+      end
+
+      context 'given a published essay within a section' do
+        let!(:section) { create(:section) }
+        let!(:essay) { create(:essay, :published, section: section) }
+
+        it 'contains that item' do
+          expect(front_paged).to_not include essay
+        end
+      end
+    end
   end
 
   it 'has a title' do

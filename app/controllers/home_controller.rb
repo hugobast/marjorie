@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @essays = Essay.sorted
+    @essays = Essay.front_paged
   end
 end
