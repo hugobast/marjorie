@@ -17,8 +17,9 @@ describe Essay do
     describe 'front_paged' do
       subject(:front_paged) { described_class.front_paged }
 
-      context 'given a published essay not in a section' do
-        let!(:essay) { create(:essay, :published, section: nil) }
+      context 'given a published essay in the main section' do
+        let!(:section) { create(:section, is_main: true) }
+        let!(:essay) { create(:essay, :published, section: section) }
 
         subject(:front_paged) { described_class.front_paged }
 
@@ -27,7 +28,7 @@ describe Essay do
         end
       end
 
-      context 'given a published essay within a section' do
+      context 'given a published essay within a regular section' do
         let!(:section) { create(:section) }
         let!(:essay) { create(:essay, :published, section: section) }
 
