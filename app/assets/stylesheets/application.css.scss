@@ -15,7 +15,7 @@ body, html {
 .banner {
   background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
   height: 10rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   position: relative;
 }
 
@@ -59,7 +59,7 @@ body, html {
 nav {
   font-family: 'adelle-sans', sans-serif;
   font-size: 0.9rem;
-  margin-bottom: $container-top-margin;
+  margin-bottom: $container-top-margin / 2;
   text-align: center;
 
   ul {
