@@ -1,4 +1,4 @@
-class Essay
+module Essays
   class Create < Interactor::Base
     def call(essay_params)
       essay = Essay.create!(essay_params)

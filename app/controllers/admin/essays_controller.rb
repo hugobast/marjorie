@@ -16,11 +16,11 @@ module Admin
     end
 
     def update
-      Essay::Update.new(self).call @essay, essay_params
+      Essays::Update.new(self).call @essay, essay_params
     end
 
     def create
-      Essay::Create.new(self).call essay_params
+      Essays::Create.new(self).call essay_params
     end
 
     def publish

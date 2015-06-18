@@ -1,4 +1,4 @@
-class Essay
+module Essays
   class Update < Interactor::Base
     def call(essay, essay_params)
       if essay.update_attributes(essay_params)
