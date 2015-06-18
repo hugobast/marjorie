@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   private
 
   def find_sections
-    @sections ||= Section.all
+    @sections ||= Section.ordered
   end
 end
