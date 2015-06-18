@@ -17,8 +17,14 @@ class Essay < ActiveRecord::Base
       where(section: nil)
     end
 
+    def main
+      includes(:section).
+        references(:sections).
+        where(sections: { is_main: true })
+    end
+
     def front_paged
-      published.orphaned.sorted
+      published.main.sorted
     end
   end
 
