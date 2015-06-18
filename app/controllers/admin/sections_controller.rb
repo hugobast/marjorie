@@ -35,7 +35,7 @@ module Admin
     private
 
     def section_params
-      params.require(:section).permit :name
+      params.require(:section).permit :name, :position, :is_main
     end
   end
 end

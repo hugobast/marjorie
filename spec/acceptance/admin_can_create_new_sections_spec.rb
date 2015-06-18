@@ -15,6 +15,8 @@ feature 'Admin can create new sections', %q{
     visit new_admin_section_path
 
     fill_in 'section[name]', with: 'Section'
+    fill_in 'section[position]', with: '1'
+    check 'section[is_main]'
 
     save!
 

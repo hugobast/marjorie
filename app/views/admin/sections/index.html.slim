@@ -3,6 +3,7 @@ table.table-minimal
     tr
       th Name
       th Essay Count
+      th Position
       th Actions
 
 
@@ -11,6 +12,7 @@ table.table-minimal
       tr
         td= section.name
         td= section.essays.count
+        td= section.position
         td
           = link_to 'Edit', edit_admin_section_path(section), class: :button
           = link_to 'Remove', admin_section_path(section), class: :button, data: { confirm: 'Are you sure?' }, method: :delete

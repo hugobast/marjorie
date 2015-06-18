@@ -1,4 +1,6 @@
-= form_for [:admin, @section] do |form|
-  = form.text_field :name, class: 'name', placeholder: 'Put your section name here...'
+= semantic_form_for [:admin, @section] do |form|
+  = form.input :name, class: 'name', placeholder: 'Put your section name here...'
+  = form.input :position
+  = form.input :is_main
 
-  = form.submit 'Save'
+  = form.action :submit, label: 'Save'
