@@ -12,6 +12,26 @@ body, html {
   padding: 0; margin: 0;
 }
 
+.wf-loading {
+  p {
+    visibility: hidden;
+  }
+
+  h1 {
+    visibility: hidden;
+  }
+
+  .logo {
+    visibility: hidden;
+  }
+
+  .menus {
+    a {
+      visibility: hidden;
+    }
+  }
+}
+
 .banner {
   background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
   height: 10rem;

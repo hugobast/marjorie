@@ -3,10 +3,7 @@ html
   head
     title Marjorie B. | Rédaction
     = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag '//use.typekit.net/iel2qll.js'
-
-    javascript:
-      try{Typekit.load();}catch(e){}
+    = javascript_include_tag 'typekit'
 
     = csrf_meta_tags
 
