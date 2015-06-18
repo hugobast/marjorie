@@ -25,7 +25,7 @@ gem 'neat', '~> 1.7.1'
 gem 'bitters'
 gem 'refills'
 
-gem 'puma'
+gem 'passenger'
 gem 'foreman'
 
 source 'https://rails-assets.org' do
