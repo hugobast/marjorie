@@ -1,0 +1,8 @@
+.contacts
+  p Mon expérience en communication et mon registre rédactionnel varié me permettent de m'adapter à vos besoins. Contactez-moi pour en savoir plus !
+
+  = semantic_form_for @contact do |form|
+    = form.input :name
+    = form.input :email
+    = form.input :text, as: :text
+    = form.action :submit, label: :send

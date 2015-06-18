@@ -15,6 +15,7 @@ gem 'fog', '~> 1.28.0'
 gem 'friendly_id', '~> 5.1.0'
 gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
 gem 'formtastic'
+gem 'reform'
 
 gem 'bourbon', '~> 4.1.1'
 gem 'neat', '~> 1.7.1'
@@ -28,6 +29,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-pen'
 end
 
+
+group :development do
+  gem 'letter_opener'
+end
 
 group :development, :test do
   gem 'dotenv-rails'

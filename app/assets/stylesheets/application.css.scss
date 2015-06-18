@@ -3,6 +3,7 @@
 @import 'base/base';
 @import 'modules/content';
 @import 'modules/social_fonts';
+@import 'specifics/contacts';
 
 $container-top-margin: 7rem;
 $container-left-margin: 15rem;
@@ -20,6 +21,11 @@ body, html {
 
 .container {
   @include outer-container;
+
+  .contacts {
+    @include shift(2.5);
+    @include span-columns(7);
+  }
 
   .essays {
     @include shift(2.5);

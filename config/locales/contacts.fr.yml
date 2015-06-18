@@ -1,0 +1,27 @@
+fr:
+  formtastic:
+    labels:
+      name: Nom
+      email: Courriel
+      text: Texte
+
+    actions:
+      send: Envoyer
+
+  contact_mailer:
+    email:
+      subject: Un message de marjorieb.ca
+
+  activerecord:
+    errors:
+      models:
+        contact:
+          attributes:
+            name:
+              blank: N'oubliez pas d'écrire votre nom
+
+            email:
+              blank: N'oubliez pas d'écrire votre courriel
+
+            text:
+              blank: Pourquoi me contactez-vous ?

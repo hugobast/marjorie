@@ -23,6 +23,8 @@ html
             - @sections.each do |section|
               li= link_to section.name, section
 
+            li= link_to 'Contact', contact_path
+
         ul.social
           li= link_to '#' do
             span.symbol &#xe286;

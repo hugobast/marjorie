@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   end
 
   resources :essays, only: :show
+  resource :contact, only: :show
+  resources :contacts, only: :create
 
   root to: 'home#index'
 end
