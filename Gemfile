@@ -18,6 +18,7 @@ gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
 gem 'formtastic'
 gem 'reform'
 gem 'rails_12factor'
+gem 'newrelic_rpm'
 
 gem 'bourbon', '~> 4.1.1'
 gem 'neat', '~> 1.7.1'
