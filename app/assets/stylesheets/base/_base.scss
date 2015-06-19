@@ -16,13 +16,12 @@
 
 .website {
   nav {
-    @include shift(3.5);
-    @include span-columns(5);
+    @include span-columns(12);
 
     ul {
       @include clearfix;
 
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
 
     .logo {

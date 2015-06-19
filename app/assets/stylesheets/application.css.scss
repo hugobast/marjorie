@@ -51,6 +51,11 @@ body, html {
     @include shift(2.5);
     @include span-columns(7);
 
+    @include media(min-width 320px max-width 768px) {
+      @include shift(1);
+      @include span-columns(10);
+    }
+
     text-align: center;
 
     .essay {
