@@ -11,6 +11,14 @@ if $el.length
 
   pen = window.pen = new Pen options
 
+  pen.on 'paste', (event) ->
+    event.preventDefault()
+
+    html = cleaner(event.clipboardData.getData 'text/html')
+
+    document.execCommand 'insertHTML', false, html
+    pen.cleanContent cleanAttrs: ['align']
+
   $('form').on 'submit', ->
     $('#essay_content').val pen.getContent()
 
