@@ -95,10 +95,10 @@ nav {
 
     li {
       a {
-        color: lighten($dark-gray, 30);
+        color: $dark-gray;
 
         &:hover {
-          color: $dark-gray;
+          color: lighten($dark-gray, 30);
         }
       }
     }
