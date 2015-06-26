@@ -18,6 +18,7 @@
     text-align: justify;
 
     b, strong {
+      font-weight: 400;
     }
 
     i, em {
@@ -33,7 +34,7 @@
 
   a {
     color: black;
-    font-weight: 500;
+    font-weight: 400;
 
     &:hover {
       color: lighten(black, 10);
@@ -67,7 +68,7 @@
   border: none;
   font-family: 'adelle-sans', sans-serif;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2rem;
   margin-bottom: 3rem;
 
