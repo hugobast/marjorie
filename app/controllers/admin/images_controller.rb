@@ -1,7 +1,7 @@
 module Admin
   class ImagesController < AdminController
     def index
-      @images = Image.all
+      @images = Image.active.sorted
     end
 
     def new
@@ -16,7 +16,7 @@ module Admin
 
     def destroy
       image = Image.find params[:id]
-      image.destroy!
+      image.deactivate!
 
       redirect_to admin_images_path, flash: { success: 'Image was removed.' }
     end

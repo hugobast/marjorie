@@ -52,7 +52,7 @@ module Admin
     end
 
     def load_images
-      @images ||= Image.sorted
+      @images ||= Image.active.sorted
     end
   end
 end
