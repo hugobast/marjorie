@@ -4,4 +4,10 @@ section.essays
       header
         h1.essay-title= link_to essay.title, essay
       .essay-content= raw essay.content
+
+      #social
+        .facebook data-url=essay_url(essay) data-text=essay.title
+        .linkedin data-url=essay_url(essay) data-text=essay.title
+        .twitter data-url=essay_url(essay) data-text=essay.title
+
       footer

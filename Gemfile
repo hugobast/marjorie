@@ -31,6 +31,7 @@ gem 'foreman'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-pen'
+  gem 'rails-assets-Julienh--Sharrre'
 end
 
 

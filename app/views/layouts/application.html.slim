@@ -7,7 +7,11 @@ html prefix="og: http://ogp.me/ns#"
     = javascript_include_tag 'typekit'
     = javascript_include_tag 'ga'
 
-    meta property="og:title" content="Marjorie B. | Rédaction"
+    - if @essay
+      meta property="og:title" content=@essay.title
+    - else
+      meta property="og:title" content="Marjorie B. | Rédaction"
+
     meta property="og:description" content="Services de rédaction professionnelle"
     meta property="og:url" content="#{url_for(only_path: false)}"
     meta property="og:image" content="#{image_url 'share-image.png'}"
@@ -16,6 +20,40 @@ html prefix="og: http://ogp.me/ns#"
     = csrf_meta_tags
 
   body.website
+    javascript:
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : #{ENV['FACEBOOK_APP_ID']},
+          xfbml      : true,
+          version    : 'v2.4'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+      window.twttr = (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function (f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));
+
     .banner
       .left-mask
       .right-mask
