@@ -49,6 +49,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rspec'
   gem 'steak'
   gem 'capybara-screenshot'
   gem 'factory_girl_rails'
