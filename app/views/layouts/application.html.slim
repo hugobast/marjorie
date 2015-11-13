@@ -14,7 +14,12 @@ html prefix="og: http://ogp.me/ns#"
 
     meta property="og:description" content="Services de rédaction professionnelle"
     meta property="og:url" content="#{url_for(only_path: false)}"
-    meta property="og:image" content="#{image_url 'share-image.png'}"
+
+    - if @essay
+      meta property="og:image" content=@essay.share_image
+    - else
+      meta property="og:image" content="#{image_url 'share-image.png'}"
+
     meta property="og:site_name" content="Marjorie B. | Rédaction"
 
     = csrf_meta_tags

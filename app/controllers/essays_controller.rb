@@ -1,5 +1,11 @@
 class EssaysController < ApplicationController
   def show
-    @essay = Essay.friendly.find params[:id]
+    @essay = find_essay.decorate
+  end
+
+  private
+
+  def find_essay
+    Essay.friendly.find params[:id]
   end
 end

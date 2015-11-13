@@ -102,6 +102,11 @@ GEM
     dotenv (2.0.0)
     dotenv-rails (2.0.0)
       dotenv (= 2.0.0)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     excon (0.44.4)
     execjs (2.4.0)
@@ -300,6 +305,7 @@ GEM
       multi_json
       nokogiri
       uber (~> 0.0.7)
+    request_store (1.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rspec (3.2.0)
@@ -375,6 +381,7 @@ DEPENDENCIES
   database_cleaner
   devise (~> 3.4.0)
   dotenv-rails
+  draper (~> 2.1)
   factory_girl_rails
   fog (~> 1.28.0)
   foreman
@@ -387,6 +394,7 @@ DEPENDENCIES
   mini_magick (~> 4.1.0)
   neat (~> 1.7.1)
   newrelic_rpm
+  nokogiri (~> 1.6)
   passenger
   pg (~> 0.17.1)
   poltergeist
