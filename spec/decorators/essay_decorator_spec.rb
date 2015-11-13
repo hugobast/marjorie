@@ -29,7 +29,7 @@ describe EssayDecorator do
 
       it 'shows abridged content' do
         expect(subject.excerpt).to eq \
-          "Well, yeah you&#39;ve gotta lock that down. She calls it a mayonegg. Please refrain from Mayoneggs during this salmonella scare. Heart attack never stopped old big bear. I could use a leather jacket..."
+          "Well, yeah you&#39;ve gotta lock that down. She calls it a mayonegg. Please refrain from Mayoneggs during this salmonella scare. Heart attack never stopped old big bear.\r\n\r\nI could use a leather jacket for when I&#39;m on my hog and have to go into a controlled slide. Oh, yeah, the $4,000\r\nsuit is..."
       end
     end
 

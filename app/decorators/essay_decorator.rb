@@ -3,7 +3,7 @@ class EssayDecorator < Draper::Decorator
 
   def excerpt
     helpers.truncate parsed_essay_content, \
-      length: 200, separator: ' '
+      length: 300, separator: ' '
   end
 
   def share_image
@@ -28,8 +28,6 @@ class EssayDecorator < Draper::Decorator
 
   def parsed_essay_content
     parsed_essay.xpath("//text()").to_s
-      .gsub(/\r\n\r\n/, ' ')
-      .gsub(/\r\n/, '')
   end
 
   def parsed_essay_images
