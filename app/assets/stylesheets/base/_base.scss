@@ -20,14 +20,16 @@
 
     ul {
       @include clearfix;
-
-      padding: 0 1rem;
     }
 
     .logo {
       color: black;
       display: inline-block;
       font-size: 5rem;
+
+      @media screen and (max-width: 320px) {
+        font-size: 4rem;
+      }
     }
 
     ul.menus {
