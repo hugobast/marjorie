@@ -5,6 +5,6 @@
 
 #= require refills/sliding_menu
 
-#= require cleaner
+#= require utils/cleaner
 #= require modules/editor
 
