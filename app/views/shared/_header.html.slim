@@ -1,0 +1,26 @@
+.StickyNavigation
+  .container
+    ul
+      li.StickyNavigation-items
+        = link_to 'Marjorie B.', root_path, class: %w(StickyNavigation-logo)
+
+      li.StickyNavigation-items
+        ul.StickyNavigation-menus
+          - @sections.each do |section|
+            li= link_to section.name, section
+
+          li= link_to 'Contact', contact_path
+
+      li.StickyNavigation-items
+        ul.StickyNavigation-social
+          li= link_to 'https://www.facebook.com/Marjorie-B-Services-de-r%C3%A9daction-1032629190114447', target: '_window' do
+            span.StickyNavigation-socialSymbol &#xe227;
+
+          li= link_to 'https://twitter.com/marjoriebelis', target: '_window' do
+            span.StickyNavigation-socialSymbol &#xe286;
+
+          li= link_to 'https://www.linkedin.com/profile/view?id=46983736', target: '_window' do
+            span.StickyNavigation-socialSymbol &#xe252;
+
+          li= link_to 'mailto:info@marjorieb.ca' do
+            span.StickyNavigation-socialSymbol &#xe224;
