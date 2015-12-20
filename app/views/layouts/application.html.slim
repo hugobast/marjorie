@@ -69,7 +69,7 @@ html prefix="og: http://ogp.me/ns#"
       .left-mask
       .right-mask
 
-    nav
+    nav class="main mobile"
       ul
         li= link_to 'Marjorie B.', root_path, class: :logo
         li
@@ -91,6 +91,8 @@ html prefix="og: http://ogp.me/ns#"
 
           li= link_to 'mailto:info@marjorieb.ca' do
             span.symbol &#xe224;
+
+    = render 'shared/header'
 
     .container
       = yield

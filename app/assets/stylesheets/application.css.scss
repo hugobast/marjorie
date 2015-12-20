@@ -5,6 +5,11 @@
 @import 'modules/social_fonts';
 @import 'specifics/contacts';
 
+$logo-font: 'freight-big-pro', serif;
+$interface-font: 'adelle-sans', sans-serif;
+
+@import 'application/modules/sticky_navigation';
+
 $container-top-margin: 7rem;
 $container-left-margin: 15rem;
 
@@ -14,8 +19,8 @@ body, html {
 
 .banner {
   background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
-  height: 10rem;
-  margin-bottom: 4rem;
+  height: 12rem;
+  margin-bottom: 6rem;
   position: relative;
 }
 
@@ -91,6 +96,25 @@ nav {
         margin-right: 0.5rem;
       }
     }
+  }
+
+  &.mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav.mobile {
+    display: block !important;
+  }
+
+  .StickyNavigation {
+    display: none;
+  }
+
+  .banner {
+    height: 10rem;
+    margin-bottom: 4rem;
   }
 }
 

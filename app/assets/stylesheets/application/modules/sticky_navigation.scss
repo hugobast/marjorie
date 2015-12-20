@@ -1,0 +1,77 @@
+.StickyNavigation {
+  @include span-columns(12);
+
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 1px -1px 16px -5px rgba(0, 0, 0, 0.75);
+
+  font-family: $interface-font;
+  position: fixed;
+  right: 0; left: 0; top: 0;
+
+  a {
+    color: black;
+    background: white;
+
+    &:hover {
+      color: lighten($dark-gray, 30);
+    }
+  }
+
+  .container {
+    @include outer-container;
+
+    > ul {
+      @include shift(1.5);
+      @include span-columns(9);
+
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul > li, ul > ul {
+      display: inline-block;
+    }
+  }
+
+  &-items {
+    @include span-columns(5 of 9);
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+
+    &:first-child {
+      @include span-columns(2.1 of 9);
+      text-align: left;
+    }
+
+    &:last-child {
+      @include span-columns(1.7 of 9);
+      text-align: right;
+    }
+  }
+
+  &-logo {
+    display: inline-block;
+    font-family: $logo-font;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  &-menus {
+    li {
+      display: inline-block;
+      margin: 0 14px;
+    }
+  }
+
+  &-social {
+    li {
+      display: inline-block;
+      margin: 0 4px;
+    }
+  }
+
+  &-socialSymbol {
+    @extend .symbol;
+  }
+}
