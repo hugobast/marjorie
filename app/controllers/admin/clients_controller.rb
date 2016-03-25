@@ -8,11 +8,24 @@ module Admin
       @client = Client.new
     end
 
+    def edit
+      @client = Client.find params[:id]
+    end
+
+    def update
+      client = Client.find params[:id]
+      client.update client_params
+
+      redirect_to admin_clients_path, flash: {
+        message: "Client: #{client.name} was created"
+      }
+    end
+
     def create
       Client.create! client_params
 
-      redirect_to action: :index, flash: {
-        success: 'New client was created'
+      redirect_to admin_clients_path, flash: {
+        message: 'New client was created'
       }
     end
 
