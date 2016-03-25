@@ -6,13 +6,9 @@ feature 'Admin can insert images in essays', %q{
   I want create to insert an image into an essat
   And save it
 }, js: true do
+  include_context 'acceptance_admin'
 
   let!(:image) { create(:image) }
-
-  background do
-    marjorie = create(:admin)
-    sign_in! marjorie
-  end
 
   scenario do
     visit new_admin_essay_path

@@ -5,13 +5,9 @@ feature 'Admin can remove an image', %q{
   As an administrator
   I want create to delete that image
 }, js: true do
+  include_context 'acceptance_admin'
 
   let!(:image) { create(:image) }
-
-  background do
-    marjorie = create(:admin)
-    sign_in! marjorie
-  end
 
   scenario do
     visit admin_images_path
