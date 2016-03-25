@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   end
 
   resources :essays, only: :show
+  resources :clients, only: :index
   resource :contact, only: :show
   resources :contacts, only: :create
 

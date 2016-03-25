@@ -1,0 +1,18 @@
+.clients
+  - @clients.each do |client|
+    .client
+      .left
+        = link_to '#' do
+          = image_tag client.image_file_url :large
+
+      .right
+        h1
+          = client.name
+
+        blockquote
+          = client.statement
+
+          cite
+            = client.reference
+
+
