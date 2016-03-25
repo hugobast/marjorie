@@ -20,7 +20,7 @@ module Admin
 
     def client_params
       params.require(:client).permit \
-       %i(image_file statement name reference)
+       %i(image_file statement name reference website)
     end
   end
 end

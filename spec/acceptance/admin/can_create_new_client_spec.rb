@@ -15,6 +15,7 @@ feature 'Admin can create new client', %q{
       fill_in 'Name', with: 'Chad'
       fill_in 'Statement', with: 'Lore ipsum'
       fill_in 'Reference', with: 'Someone Somebody'
+      fill_in 'Website', with: 'http://www.example.com'
 
       attach_file 'Image file', 'spec/fixtures/file.png'
 

@@ -2,7 +2,7 @@
   - @clients.each do |client|
     .client
       .left
-        = link_to '#' do
+        = link_to client.website do
           = image_tag client.image_file_url :large
 
       .right
