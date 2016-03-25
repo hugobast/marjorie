@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
       resources :images
       resources :sections
+      resources :clients
     end
   end
 

@@ -1,0 +1,7 @@
+= semantic_form_for [:admin, @client] do |form|
+  = form.input :name
+  = form.input :statement
+  = form.input :reference
+  = form.file_field :image_file
+
+  = form.submit 'Save'
