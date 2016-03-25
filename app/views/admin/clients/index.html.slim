@@ -1,2 +1,8 @@
+.clients
+  - @clients.each do |client|
+    .client
+      h1
+        = link_to client.name, edit_admin_client_path(client)
+
 = content_for :actions
   = link_to 'Create Client', new_admin_client_path
