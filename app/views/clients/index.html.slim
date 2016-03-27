@@ -6,13 +6,6 @@
           = image_tag client.image_file_url :large
 
       .right
-        h1
-          = client.name
-
         blockquote
-          = client.statement
-
-          cite
-            = client.reference
-
-
+          p= "« #{client.statement} »"
+          cite= "— #{client.reference}, #{client.name}"
