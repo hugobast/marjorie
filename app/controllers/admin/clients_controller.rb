@@ -17,7 +17,7 @@ module Admin
       client.update client_params
 
       redirect_to admin_clients_path, flash: {
-        message: "Client: #{client.name} was created"
+        notice: "Client: #{client.name} was created"
       }
     end
 
@@ -25,7 +25,7 @@ module Admin
       Client.create! client_params
 
       redirect_to admin_clients_path, flash: {
-        message: 'New client was created'
+        notice: 'New client was created'
       }
     end
 
