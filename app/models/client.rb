@@ -16,4 +16,12 @@ class Client < ActiveRecord::Base
       where collaboration: true
     end
   end
+
+  def display
+    return 'collaboration' if collaboration
+    return 'full' unless statement.empty?
+    return 'logo' if image_file?
+
+    'text'
+  end
 end
