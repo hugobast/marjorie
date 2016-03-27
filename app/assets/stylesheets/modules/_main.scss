@@ -1,6 +1,6 @@
 .main {
-  margin-top: $navigation-height;
+  @include span-columns(12);
+  
   margin-bottom: $navigation-height;
-  @include shift(1);
-  @include span-columns(8);
+  margin-left: 20px;
 }
