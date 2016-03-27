@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
   def index
-    @clients = Client.all
+    @clients = Client.by_importance
   end
 end
