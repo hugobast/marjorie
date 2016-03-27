@@ -1,8 +1,19 @@
-.clients
-  - @clients.each do |client|
-    .client
-      h1
-        = link_to client.name, edit_admin_client_path(client)
+table.table-minimal
+  thead
+    tr
+      th Name
+      th Type
+      th Actions
+
+
+  tbody
+    - @clients.each do |client|
+      tr
+        td= client.name
+        td= client.collaboration? && 'collaboration' || 'client'
+        td
+          = link_to 'Edit', edit_admin_client_path(client), class: :button
+          = link_to 'Remove', admin_client_path(client), class: :button, data: { confirm: 'Are you sure?' }, method: :delete
 
 = content_for :actions
   = link_to 'Create Client', new_admin_client_path
