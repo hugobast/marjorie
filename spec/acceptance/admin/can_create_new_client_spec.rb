@@ -26,6 +26,6 @@ feature 'Admin can create new client', %q{
   end
 
   def expect_to_see_one_client
-    expect(page).to have_selector('.client', count: 1)
+    expect(page).to have_selector('tbody tr', count: 1)
   end
 end
