@@ -5,11 +5,7 @@ feature 'Admin can create new content', %q{
   As an administrator
   I want create a new essay and save it
 }, js: true do
-
-  background do
-    marjorie = create(:admin)
-    sign_in! marjorie
-  end
+  include_context 'acceptance_admin'
 
   scenario do
     visit new_admin_essay_path

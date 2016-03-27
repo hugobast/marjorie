@@ -1,0 +1,99 @@
+.clients {
+  .client {
+    @include display(flex);
+    @include flex(1);
+    @include flex-direction(row);
+
+    margin-bottom: 4rem;
+
+    .left {
+      @include display(flex);
+      @include flex-direction(column);
+      @include align-content(center);
+      @include justify-content(center);
+
+      img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+
+    .right {
+      @include display(flex);
+      @include flex(1);
+      @include flex-direction(column);
+
+      h1 {
+        font-family: 'adelle-sans', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin-bottom: 0;
+      }
+
+      blockquote {
+        font-family: 'clavo', serif;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 1.4rem;
+
+        cite {
+          display: block;
+          font-weight: 400;
+        }
+      }
+    }
+
+    @include media(min-width 320px max-width 768px) {
+      @include flex-direction(column);
+
+      .left {
+        @include flex-direction(row);
+
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+.tiles {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-content(center);
+  @include justify-content(center);
+
+  h1 {
+    @include flex(0 0 100%);
+    @include title-content;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .client {
+    @include display(flex);
+    @include flex(0 0 170px);
+    @include align-content(center);
+    @include justify-content(center);
+
+    margin-bottom: 1rem;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @include media(min-width 320px max-width 768px) {
+    .client {
+      @include flex(0 0 220px);
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
 @import 'modules/content';
 @import 'modules/social_fonts';
 @import 'specifics/contacts';
+@import 'specifics/clients';
 
 $logo-font: 'freight-big-pro', serif;
 $interface-font: 'adelle-sans', sans-serif;
@@ -27,20 +28,17 @@ body, html {
 .container {
   @include outer-container;
 
-  .contacts {
+  .content {
+    @include span-columns(7 of 12, no-display);
     @include shift(2.5);
-    @include span-columns(7);
+
+    @include media(min-width 320px max-width 768px) {
+      @include span-columns(10 of 12, no-display);
+      @include shift(1);
+    }
   }
 
   .essays {
-    @include shift(2.5);
-    @include span-columns(7);
-
-    @include media(min-width 320px max-width 768px) {
-      @include shift(1);
-      @include span-columns(10);
-    }
-
     text-align: center;
 
     .essay {

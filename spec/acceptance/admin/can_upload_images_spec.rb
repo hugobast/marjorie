@@ -5,11 +5,7 @@ feature 'Admin can upload images', %q{
   As an admin and content creator
   I want to upload an image
 } do
-
-  background do
-    marjorie = create(:admin)
-    sign_in! marjorie
-  end
+  include_context 'acceptance_admin'
 
   scenario do
     visit admin_images_path

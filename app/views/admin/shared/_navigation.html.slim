@@ -2,8 +2,8 @@ nav.navigation role="navigation"
   = link_to 'M', root_url(subdomain: false), class: :logo
 
   ul
-    li= link_to 'Dashboard', admin_root_path
     li= link_to 'Essays', admin_essays_path
     li= link_to 'Sections', admin_sections_path
     li= link_to 'Images', admin_images_path
+    li= link_to 'Clients', admin_clients_path
     li.right= link_to 'Sign Out', destroy_user_session_path, method: :delete

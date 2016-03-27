@@ -1,0 +1,26 @@
+.content.clients
+  - @clients.each do |client|
+    .client
+      .left
+        = link_to client.website, target: '_window' do
+          = image_tag client.image_file_url :large
+
+      .right
+        blockquote
+          p= "« #{client.statement} »"
+          cite= "— #{client.reference}, #{client.name}"
+
+.content.tiles
+  - @tiles.each do |client|
+    .client
+      = link_to client.website, target: '_window' do
+        = image_tag client.image_file_url :large
+
+- if @collabs.any?
+  .content.tiles
+    h1 Collaborations
+
+    - @collabs.each do |collab|
+      .client
+        = link_to collab.website, target: '_window' do
+          = image_tag collab.image_file_url :large

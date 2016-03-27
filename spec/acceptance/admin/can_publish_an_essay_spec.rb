@@ -5,13 +5,9 @@ feature 'Admin can publish an essay', %q{
   As an administrator
   I want create to publish an essay
 }, js: true do
+  include_context 'acceptance_admin'
 
   let!(:essay) { create(:essay) }
-
-  background do
-    marjorie = create(:admin)
-    sign_in! marjorie
-  end
 
   scenario do
     visit admin_essay_path(essay)
