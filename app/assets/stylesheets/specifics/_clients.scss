@@ -65,6 +65,13 @@
   @include align-content(center);
   @include justify-content(center);
 
+  h1 {
+    @include flex(0 0 100%);
+    @include title-content;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
   .client {
     @include display(flex);
     @include flex(0 0 170px);
@@ -80,7 +87,6 @@
   }
 
   @include media(min-width 320px max-width 768px) {
-
     .client {
       @include flex(0 0 220px);
 
