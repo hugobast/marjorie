@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   def index
-    @clients = Client.by_importance
+    @clients = Client.important
+    @tiles = Client.less_important
   end
 end

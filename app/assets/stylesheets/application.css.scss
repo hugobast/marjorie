@@ -29,11 +29,11 @@ body, html {
   @include outer-container;
 
   .content {
-    @include span-columns(7 of 12);
+    @include span-columns(7 of 12, no-display);
     @include shift(2.5);
 
     @include media(min-width 320px max-width 768px) {
-      @include span-columns(10 of 12);
+      @include span-columns(10 of 12, no-display);
       @include shift(1);
     }
   }

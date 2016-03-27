@@ -58,3 +58,36 @@
     }
   }
 }
+
+.tiles {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-content(center);
+  @include justify-content(center);
+
+  .client {
+    @include display(flex);
+    @include flex(0 0 170px);
+    @include align-content(center);
+    @include justify-content(center);
+
+    margin-bottom: 1rem;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @include media(min-width 320px max-width 768px) {
+
+    .client {
+      @include flex(0 0 220px);
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
