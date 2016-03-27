@@ -1,7 +1,7 @@
 module Admin
   class ClientsController < AdminController
     def index
-      @clients = Client.all
+      @clients = Client.order created_at: :asc
     end
 
     def new
