@@ -1,7 +1,7 @@
 .essays
   .essay
     h1
-      = @essay.title
+      = @essay.title.empty? && 'Missing title' || @essay.title
       .right.badge-notice= @essay.state
     article
       = raw @essay.content

@@ -2,7 +2,7 @@
   - @essays.each do |essay|
     .essay
       h1
-        = link_to essay.title, admin_essay_path(essay)
+        = link_to essay.title.empty? && 'Missing title' || essay.title, admin_essay_path(essay)
         .right.badge-notice= essay.state
       article.normal-margin-bottom
         = truncate strip_tags(essay.content), length: 400
