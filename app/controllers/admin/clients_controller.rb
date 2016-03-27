@@ -29,6 +29,15 @@ module Admin
       }
     end
 
+    def destroy
+      client = Client.find params[:id]
+      client.destroy
+
+      redirect_to admin_clients_path, flash: {
+        notice: "Client: #{client.name} was deleted"
+      }
+    end
+
     private
 
     def client_params
