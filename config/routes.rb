@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     }
 
     namespace 'admin', path: '/' do
-      root to: 'dashboard#show'
+      root to: 'essays#index'
 
       resources :essays do
         put :publish, on: :member
