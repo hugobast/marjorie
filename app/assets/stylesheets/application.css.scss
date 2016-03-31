@@ -104,6 +104,13 @@ nav {
 @media screen and (max-width: 1024px) {
   nav.mobile {
     display: block !important;
+    font-size: 13px;
+
+    ul.menus {
+      li {
+        padding: 0.5em
+      }
+    }
   }
 
   .StickyNavigation {
