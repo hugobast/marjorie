@@ -17,6 +17,7 @@ $('.linkedin').sharrre
   template: '<a href="#"><span class="symbol">&#xe252</span></a>'
   enableHover: false
   enableTracking: false
+  urlCurl: ''
   click: (api, options) ->
     api.openPopup 'linkedin'
 
