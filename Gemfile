@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.3.1'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bitters'
@@ -21,12 +21,12 @@ gem 'newrelic_rpm'
 gem 'passenger'
 gem 'pg', '~> 0.17.1'
 gem 'rack', '1.6.2'
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.7.1'
 gem 'rails_12factor'
 gem 'refills'
 gem 'reform'
 gem 'slim', '~> 2.0.2'
-gem 'state_machine', git: 'https://github.com/seuros/state_machine.git'
+gem 'state_machines-activerecord'
 gem 'uglifier', '>= 1.3.0'
 
 source 'https://rails-assets.org' do
