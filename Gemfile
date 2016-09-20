@@ -14,6 +14,7 @@ gem 'fog', '~> 1.28.0'
 gem 'formtastic'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails', '~> 4.0.3'
+gem 'kaminari', '0.17.0'
 gem 'mini_magick', '~> 4.1.0'
 gem 'neat', '~> 1.7.1'
 gem 'nokogiri', '~> 1.6'
@@ -36,6 +37,7 @@ end
 
 group :development do
   gem 'letter_opener'
+  gem 'faker'
 end
 
 group :development, :test do
