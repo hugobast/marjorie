@@ -5,6 +5,11 @@
     total_pages  : total number of pages
     per_page     : number of items to fetch per page
     remote       : data-remote
-span.next
-  == link_to_unless current_page.last?, '›', url, rel: :next, remote: remote
-'
+span.Pagination--next-page
+  - if current_page.last?
+    span.Pagination--current
+      = image_tag 'next.svg'
+
+  - else
+    = link_to url, rel: :next, remote: remote do
+      = image_tag 'next.svg'
