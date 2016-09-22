@@ -1,0 +1,49 @@
+.Pagination * {
+  color: $base-font-color;
+}
+
+.Pagination a {
+  color: $base-font-color;
+
+  &:hover {
+    color: lighten($base-font-color, 30);
+  }
+}
+
+.Pagination {
+  &--next-page, &--previous-page {
+    img {
+      height: rem(15);
+      width: auto;
+    }
+
+    .Pagination--current {
+      padding: rem(5) rem(15);
+      opacity: .6;
+    }
+
+    a {
+      padding: rem(5) rem(15);
+      transition: opacify .3s;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  &--page {
+    padding: rem(5) rem(12)
+  }
+
+  &--page.Pagination--current {
+    background: lighten($base-font-color, 60);
+    border-radius: $base-border-radius;
+  }
+
+  &--current {
+    display: inline-block;
+    color: lighten($base-font-color, 30);
+  }
+}
+
