@@ -2,14 +2,6 @@
   color: $base-font-color;
 }
 
-.Pagination a {
-  color: $base-font-color;
-
-  &:hover {
-    color: lighten($base-font-color, 30);
-  }
-}
-
 .Pagination {
   &--next-page, &--previous-page {
     img {
