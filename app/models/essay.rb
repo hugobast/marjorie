@@ -3,6 +3,7 @@ class Essay < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   belongs_to :section
+  has_and_belongs_to_many :categories
 
   class << self
     def sorted
