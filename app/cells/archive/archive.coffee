@@ -4,6 +4,4 @@ $('.classification__reveal').on 'click', (event) ->
   willReveal = $('.classification__subsection-hidden').first()
   willReveal.removeClass('classification__subsection-hidden')
 
-$('.classification').stick_in_parent
-  offset_top: 100
-  sticky_class: 'classification-stick'
+$('.classification').Stickyfill();
