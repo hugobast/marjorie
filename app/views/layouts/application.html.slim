@@ -95,9 +95,12 @@ html prefix="og: http://ogp.me/ns#"
 
     = render 'shared/header'
 
-    .container
-      = yield
+    - if current_page?(root_path) || current_page?('/sections/blogue')
+      .container.classification-visible
+        = yield
 
-      = render 'shared/classification'
+        = render 'shared/classification'
+    - else
+      .container= yield
 
     = javascript_include_tag 'application'
