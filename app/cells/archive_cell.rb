@@ -3,8 +3,8 @@ class ArchiveCell < Cell::ViewModel
   include ActionView::Helpers::TranslationHelper
 
   def index
-    @grouped_archives = Essay.months_of_publication.in_groups_of(5)
-    @visible_archives = @grouped_archives.shift
+    @grouped_archives = Essay.months_of_publication.in_groups_of(5, false)
+    @visible_archives = @grouped_archives.shift || []
 
     render
   end

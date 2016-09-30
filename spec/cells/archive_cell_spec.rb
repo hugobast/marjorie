@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe ArchiveCell, type: :cell do
+  controller HomeController
+
   describe 'index' do
     subject { cell(:archive).(:index) }
 
