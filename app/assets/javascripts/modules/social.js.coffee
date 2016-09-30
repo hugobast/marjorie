@@ -4,6 +4,8 @@ $('.twitter, .facebook, .linkedin').on 'click', (event) ->
 $('.twitter').sharrre
   share:
     twitter: true
+  buttons:
+    twitter: false
   template: '<a href="#"><span class="symbol">&#xe286</span></a>'
   enableHover: false
   enableTracking: false
@@ -14,6 +16,8 @@ $('.twitter').sharrre
 $('.linkedin').sharrre
   share:
     linkedin: true
+  buttons:
+    linkedin: false
   template: '<a href="#"><span class="symbol">&#xe252</span></a>'
   enableHover: false
   enableTracking: false
@@ -24,6 +28,8 @@ $('.linkedin').sharrre
 $('.facebook').sharrre
   share:
     facebook: true
+  buttons:
+    facebook: false
   template: '<a href="#"><span class="symbol">&#xe227</span></a>'
   enableHover: false
   enableTracking: false
