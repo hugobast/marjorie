@@ -1,0 +1,8 @@
+h4.classification__title Archives
+
+ul.classification__archives
+  li.classification__section
+    ul
+      - @archives.each do |archive|
+        li.classification__item
+          a< href="#" = formatted(archive)
