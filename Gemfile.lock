@@ -289,6 +289,7 @@ GEM
       sprockets-rails
     rails-assets-Julienh--Sharrre (2.0.1)
     rails-assets-pen (0.2.2)
+    rails-assets-sticky-kit (1.1.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -432,6 +433,7 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   rails-assets-Julienh--Sharrre!
   rails-assets-pen!
+  rails-assets-sticky-kit!
   rails_12factor
   refills
   reform

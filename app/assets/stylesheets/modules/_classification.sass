@@ -12,6 +12,9 @@
     text-align: center
     margin-bottom: rem(30)
 
+  &-stick
+    @include shift(1.514)
+
   &__categories
     margin-bottom: rem(25)
 
@@ -39,3 +42,12 @@
       max-height: 0
       overflow: hidden
       opacity: 0
+
+  &__social
+    &__symbol
+      @extend .symbol
+      font-size: rem(30)
+
+    &__item
+      display: inline-block
+      margin: 0 rem(4)
