@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
   def show
-    @essays = section.essays.sorted.published
+    @essays = section.essays.sorted.published.page params[:page]
   end
 
   private
