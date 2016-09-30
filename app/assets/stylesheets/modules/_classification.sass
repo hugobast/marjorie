@@ -6,6 +6,12 @@
   font-size: rem(13)
   text-align: right
 
+  @include media(min-width 320px max-width 768px)
+    @include span-columns(10 of 12, no-display)
+    @include shift(1)
+    text-align: center
+    margin-bottom: rem(30)
+
   &__categories
     margin-bottom: rem(25)
 
