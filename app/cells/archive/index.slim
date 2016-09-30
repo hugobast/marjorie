@@ -2,7 +2,15 @@ h4.classification__title Archives
 
 ul.classification__archives
   li.classification__section
-    ul
-      - @archives.each do |archive|
+    ul.classification__subsection
+      - @visible_archives.each do |archive|
         li.classification__item
           a< href="#" = formatted(archive)
+
+    - @grouped_archives.each do |grouped_archive|
+      ul.classification__subsection.classification__subsection-hidden
+        - grouped_archive.each do |archive|
+          li.classification__item
+            a< href="#" = formatted(archive)
+
+    a.classification__reveal< href="#"(...)
