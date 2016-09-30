@@ -37,6 +37,13 @@ class Essay < ActiveRecord::Base
     def convert_to_publication_month(group)
       PublicationMonth.new(group.first, group.second.count)
     end
+
+    def archived(year, month)
+      beginning = Time.new(year, month)
+      ending = beginning.end_of_month
+
+      where(published_at: beginning..ending)
+    end
   end
 
   state_machine initial: :drafted do
@@ -56,5 +63,5 @@ class Essay < ActiveRecord::Base
 
   private
 
-  PublicationMonth = Struct.new(:month, :count)
+  PublicationMonth = Struct.new(:date, :count)
 end

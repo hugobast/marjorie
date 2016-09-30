@@ -10,6 +10,6 @@ class ArchiveCell < Cell::ViewModel
   end
 
   def formatted(archive)
-    "#{l(archive.month, format: :archive, locale: :fr)} (#{archive.count})"
+    "#{l(archive.date, format: :archive, locale: :fr)} (#{archive.count})"
   end
 end
