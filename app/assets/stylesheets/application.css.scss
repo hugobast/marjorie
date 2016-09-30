@@ -31,7 +31,9 @@ body, html {
   @include outer-container;
 
   .content {
-    @include span-columns(7 of 12, no-display);
+    @include shift(0.5);
+    @include span-columns(7);
+    margin-right: 0;
 
     @include media(min-width 320px max-width 768px) {
       @include span-columns(10 of 12, no-display);
