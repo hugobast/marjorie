@@ -35,4 +35,6 @@ section = Section.friendly.find('blog')
   section.essays << essay
 
   essay.publish!
+
+  essay.update(published_at: Faker::Date.between(3.years.ago, Date.today))
 end

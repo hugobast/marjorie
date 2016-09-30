@@ -4,6 +4,7 @@
 @import 'modules/content';
 @import 'modules/social_fonts';
 @import 'modules/pagination';
+@import 'modules/classification';
 @import 'specifics/contacts';
 @import 'specifics/clients';
 
@@ -30,8 +31,9 @@ body, html {
   @include outer-container;
 
   .content {
-    @include span-columns(7 of 12, no-display);
-    @include shift(2.5);
+    @include shift(0.5);
+    @include span-columns(7);
+    margin-right: 0;
 
     @include media(min-width 320px max-width 768px) {
       @include span-columns(10 of 12, no-display);
@@ -75,16 +77,6 @@ nav {
     .logo {
       font-family: 'freight-big-pro', serif;
       font-weight: 300;
-    }
-
-    li {
-      a {
-        color: $dark-gray;
-
-        &:hover {
-          color: lighten($dark-gray, 30);
-        }
-      }
     }
 
     .social {

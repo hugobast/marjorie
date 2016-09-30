@@ -1,7 +1,7 @@
 @mixin body-content() {
   clear: both;
   color: black;
-  font-family: 'clavo', serif;
+  font-family: $content-font-family;
   font-size: 14px;
   font-weight: 300;
 
@@ -70,7 +70,7 @@
 @mixin title-content() {
   box-shadow: none;
   border: none;
-  font-family: 'adelle-sans', sans-serif;
+  font-family: $title-font-family;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2rem;

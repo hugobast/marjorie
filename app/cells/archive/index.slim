@@ -1,0 +1,16 @@
+h4.classification__title Archives
+
+ul.classification__archives
+  li.classification__section
+    ul.classification__subsection
+      - @visible_archives.each do |archive|
+        li.classification__item
+          = link_to formatted(archive), archives_path(year: archive.date.year, month: archive.date.month)
+
+    - @grouped_archives.each do |grouped_archive|
+      ul.classification__subsection.classification__subsection-hidden
+        - grouped_archive.each do |archive|
+          li.classification__item
+            = link_to formatted(archive), archives_path(year: archive.date.year, month: archive.date.month)
+
+    a.classification__reveal< href="#"(...)

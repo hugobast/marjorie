@@ -28,5 +28,6 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  get 'pages/:page', to: 'home#index'
+  get 'pages/:page',           to: 'home#index'
+  get 'archives/:year/:month(/:page)', to: 'home#index', as: :archives
 end
