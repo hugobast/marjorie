@@ -1,29 +1,15 @@
 .table-minimal {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
   $base-font-color: $dark-gray !default;
-  
-  width: 100%;
-
-  th {
-    text-align: left;
-  }
-
-  td {
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: $base-background-color;
@@ -31,10 +17,11 @@
   $table-hover-background: darken($table-background, 2);
   $table-stripe-background: darken($table-background, 4);
   $table-stripe-background-hover: darken($table-stripe-background, 5);
-  $table-padding: .75em 1em;
+  $table-padding: 0.75em 1em;
 
   border-collapse: separate;
   border-spacing: 0;
+  width: 100%;
 
   tbody {
     tr:hover > td, tr:hover > th {
@@ -48,8 +35,9 @@
   thead {
     th {
       background-color: $table-header-background;
-      border-bottom: 0px;
+      border-bottom: 0;
       padding: $table-padding;
+      text-align: left;
     }
   }
 
@@ -57,19 +45,19 @@
     background-color: $table-background;
 
     td {
-      border-bottom: 0px;
+      border-bottom: 0;
       border-top: 1px solid $table-border-color;
+      line-height: $base-line-height;
       padding: $table-padding;
 
-      button, a.button {
-        @include button(flat, $base-accent-color);
+      button {
         display: inline-block;
-        font-size: .7em;
+        font-size: 0.7em;
         line-height: $base-line-height;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
         margin-right: 0.5em;
         outline: none;
-        padding: .3em 1em;
+        padding: 0.3em 1em;
         width: 100%;
 
         @include media($medium-screen) {

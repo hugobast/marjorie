@@ -1,16 +1,16 @@
 .clients {
   .client {
-    @include display(flex);
-    @include flex(1);
-    @include flex-direction(row);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
 
     margin-bottom: 4rem;
 
     .left {
-      @include display(flex);
-      @include flex-direction(column);
-      @include align-content(center);
-      @include justify-content(center);
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
 
       img {
         height: 150px;
@@ -19,9 +19,9 @@
     }
 
     .right {
-      @include display(flex);
-      @include flex(1);
-      @include flex-direction(column);
+      display: flex;
+      flex: 1;
+      flex-direction: column;
 
       h1 {
         font-family: 'adelle-sans', sans-serif;
@@ -45,10 +45,10 @@
     }
 
     @include media(min-width 320px max-width 768px) {
-      @include flex-direction(column);
+      flex-direction: column;
 
       .left {
-        @include flex-direction(row);
+        flex-direction: row;
 
         img {
           height: 200px;
@@ -60,23 +60,23 @@
 }
 
 .tiles {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include align-content(center);
-  @include justify-content(center);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 
   h1 {
-    @include flex(0 0 100%);
+    flex: 0 0 100%;
     @include title-content;
     margin-top: 4rem;
     text-align: center;
   }
 
   .client {
-    @include display(flex);
-    @include flex(0 0 170px);
-    @include align-content(center);
-    @include justify-content(center);
+    display: flex;
+    flex: 0 0 170px;
+    align-content: center;
+    justify-content: center;
 
     margin-bottom: 1rem;
 
@@ -88,7 +88,7 @@
 
   @include media(min-width 320px max-width 768px) {
     .client {
-      @include flex(0 0 220px);
+      flex: 0 0 220px;
 
       img {
         width: 200px;

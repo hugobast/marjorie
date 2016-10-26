@@ -1,12 +1,13 @@
 @import 'pen';
-@import 'bourbon';
+@import 'bourbon/bourbon';
 @import 'neat';
 @import 'base/base';
 @import 'refills/badges';
 @import 'refills/cards';
 @import 'refills/flashes';
-@import 'refills/sliding-menu';
+@import 'refills/sliding-panel';
 @import 'refills/tables-minimal';
+@import 'modules/typography';
 @import 'modules/content';
 @import 'modules/navigation';
 @import 'modules/editor';
