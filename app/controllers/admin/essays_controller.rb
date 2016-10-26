@@ -26,7 +26,7 @@ module Admin
     def publish
       @essay.drafted? ? @essay.publish! : @essay.draft!
 
-      redirect_to :back
+      redirect_back fallback_location: admin_essay_path
     end
 
     def updated_successfully

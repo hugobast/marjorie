@@ -1,42 +1,14 @@
-// Bitters 1.0.0
+// Bitters 1.4.0
 // http://bitters.bourbon.io
 // Copyright 2013-2015 thoughtbot, inc.
 // MIT License
 
 @import "variables";
 
-// Neat Settings -- uncomment if using Neat -- must be imported before Neat
-@import "grid-settings";
-
 @import "buttons";
 @import "forms";
+@import "layout";
 @import "lists";
+@import "media";
 @import "tables";
 @import "typography";
-
-.website {
-  nav {
-    @include span-columns(12);
-
-    ul {
-      @include clearfix;
-    }
-
-    .logo {
-      color: black;
-      display: inline-block;
-      font-size: 5rem;
-
-      @media screen and (max-width: 320px) {
-        font-size: 4rem;
-      }
-    }
-
-    ul.menus {
-      li {
-        display: inline;
-        padding: 1em;
-      }
-    }
-  }
-}

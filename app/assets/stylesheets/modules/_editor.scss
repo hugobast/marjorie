@@ -1,6 +1,6 @@
 .pen-menu {
   * {
-    @include box-sizing(content-box)
+    box-sizing: content-box;
   }
 }
 
