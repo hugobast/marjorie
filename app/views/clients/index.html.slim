@@ -1,26 +1,18 @@
 .content.clients
   - @clients.each do |client|
     .client
-      - if client.image_file_url
-        .left
+      .left
+        - if client.image_file_url
           = link_to client.website, target: '_window' do
             = image_tag client.image_file_url :large
 
-        .right
-          blockquote
-            p= "« #{client.statement} »"
-            cite
-              | — #{client.reference}
-              - if !client.reference.empty? && !client.name.empty?
-                ' ,
-              | #{client.name}
-      - else
+      .right
         blockquote
           p= "« #{client.statement} »"
           cite
             | — #{client.reference}
             - if !client.reference.empty? && !client.name.empty?
-              | ,
+              ' ,
             | #{client.name}
 
 .content.tiles
