@@ -32,6 +32,33 @@ body, html {
     display: block;
     margin: 1rem;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    background-color: #333;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+
     &:first-child {
       margin-top: 1rem;
     }
@@ -49,3 +76,23 @@ body, html {
   }
 }
 
+li {
+  list-style: none;
+}
+
+.button {
+  background-color: #477DCA;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  background-clip: padding-box;
+  display: inline-block;
+  font-size: .7em;
+  line-height: 1.5;
+  margin-right: 0.5em;
+  outline: none;
+  padding: .3em 1em;
+}
