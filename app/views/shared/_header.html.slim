@@ -1,11 +1,11 @@
-.StickyNavigation
+.sticky-navigation
   .container
     ul
-      li.StickyNavigation-items
-        = link_to 'MB', root_path, class: %w(StickyNavigation-logo)
+      li.sticky-navigation__items
+        = link_to 'MB', root_path, class: %w(sticky-navigation__logo)
 
-      li.StickyNavigation-items
-        ul.StickyNavigation-menus
+      li.sticky-navigation__items
+        ul.sticky-navigation__menus
           - @sections.each do |section|
             li= link_to section.name, section
 

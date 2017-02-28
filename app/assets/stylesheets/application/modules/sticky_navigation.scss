@@ -1,4 +1,4 @@
-.StickyNavigation {
+.sticky-navigation {
   @include span-columns(12);
 
   background: rgba(255, 255, 255, 1);
@@ -35,12 +35,14 @@
     }
   }
 
-  &-items {
+  &__items {
     @include shift(1);
     @include span-columns(5 of 11);
-    height: 3rem;
-    line-height: 3rem;
+    height: rem(70);
+    line-height: rem(70);
     text-align: center;
+
+    transition: all 0.2s ease-in;
 
     &:first-child {
       @include shift(0);
@@ -49,23 +51,32 @@
     }
   }
 
-  &-logo {
+  &__logo {
     display: inline-block;
     font-family: $logo-font;
-    font-size: rem(60);
+    font-size: rem(70);
+
+    transition: font-size 0.2s ease-in;
   }
 
-  &-menus {
+  &__menus {
     li {
       display: inline-block;
       margin: 0 14px;
     }
   }
 
-  &-social {
-    li {
-      display: inline-block;
-      margin: 0 4px;
+
+  &__shrink {
+    .sticky-navigation {
+      &__items {
+        height: rem(40);
+        line-height: rem(40);
+      }
+
+      &__logo {
+        font-size: rem(40);
+      }
     }
   }
 }
