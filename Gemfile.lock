@@ -373,6 +373,9 @@ GEM
     reform (2.2.4)
       disposable (>= 0.4.1)
       representable (>= 2.4.0, < 3.1.0)
+    reform-rails (0.1.7)
+      activemodel (>= 3.2)
+      reform (>= 2.2.0)
     representable (3.0.3)
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
@@ -499,6 +502,7 @@ DEPENDENCIES
   rails-assets-pen (~> 0.2)!
   refills (~> 0.2)
   reform (~> 2.2)
+  reform-rails (~> 0.1)
   rspec (~> 3.5)
   rspec-cells (~> 0.3)
   rspec-rails (~> 3.5)
