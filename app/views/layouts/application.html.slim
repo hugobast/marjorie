@@ -66,12 +66,10 @@ html prefix="og: http://ogp.me/ns#"
       }(document, "script", "twitter-wjs"));
 
     .banner
-      .left-mask
-      .right-mask
 
     nav class="main mobile"
       ul
-        li= link_to 'Marjorie B.', root_path, class: :logo
+        li= link_to 'MB', root_path, class: :logo
         li
           ul.menus
             - @sections.each do |section|
