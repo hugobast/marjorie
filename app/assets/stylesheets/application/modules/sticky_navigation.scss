@@ -46,7 +46,7 @@
 
     &:first-child {
       @include shift(0);
-      @include span-columns(4 of 11);
+      @include span-columns(2 of 11);
       text-align: left;
     }
   }
