@@ -68,8 +68,8 @@ body, html {
         @include shift(2.5);
         @include span-columns(7);
 
-        background: asset-url('pattern@2x.png') repeat top left / 21px 22px;
-        height: 12px;
+        background: black;
+        height: 3px;
         margin-top: 4rem;
       }
     }
@@ -77,14 +77,17 @@ body, html {
 }
 
 nav {
-  font-family: 'adelle-sans', sans-serif;
   font-size: 0.9rem;
   margin-bottom: $container-top-margin / 2;
   text-align: center;
+  a {
+    color: $dark-gray;
+  }
 
   ul {
     .logo {
-      font-family: 'freight-big-pro', serif;
+      font-family: $logo-font;
+      font-size: rem(70);
       font-weight: 300;
     }
 
@@ -106,7 +109,8 @@ nav {
 @media screen and (max-width: 1024px) {
   nav.mobile {
     display: block !important;
-    font-size: 13px;
+    font-family: $logo-font;
+    font-size: rem(13);
 
     ul.menus {
       li {
@@ -120,8 +124,21 @@ nav {
   }
 
   .banner {
-    height: 10rem;
+    height: 3rem;
     margin-bottom: 4rem;
+    background: asset-url('pattern@2x.png') no-repeat top left / 414px 60px;
+  }
+
+  .container.classification-visible {
+    .content {
+      @include shift(0.5);
+      @include span-columns(11);
+      margin-right: 0;
+    }
+  }
+
+  .classification {
+    display: none;
   }
 }
 
