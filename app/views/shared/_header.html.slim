@@ -1,13 +1,15 @@
 .sticky-navigation
   .container
     ul
-      li.sticky-navigation__items
+      li.sticky-navigation__items.sticky-navigation__items__first
         = link_to 'MB', root_path, class: %w(sticky-navigation__logo)
 
-      li.sticky-navigation__items
+      li.sticky-navigation__items.sticky-navigation__items__middle
         ul.sticky-navigation__menus
           - @sections.each do |section|
-            li= link_to section.name, section
+            li.sticky-navigation__menus__item= link_to section.name, section
 
-          li= link_to 'Clients', clients_path
-          li= link_to 'Contact', contact_path
+          li.sticky-navigation__menus__item= link_to 'Contact', contact_path
+
+      li.sticky-navigation__items.sticky-navigation__items__last
+        = render 'shared/socials'

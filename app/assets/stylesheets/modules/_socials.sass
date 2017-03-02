@@ -1,3 +1,27 @@
 .facebook, .twitter, .linkedin
   display: inline
   margin: 5px
+
+.socials
+  font-family: $content-font-family
+  font-size: rem(13)
+  text-align: right
+
+  @include media(min-width 320px max-width 768px)
+    @include span-columns(10 of 12, no-display)
+    @include shift(1)
+    text-align: center
+    margin-bottom: rem(30)
+
+  &__items
+    a
+      color: $dark-gray
+
+  &__symbol
+    @extend .symbol
+    font-size: rem(30)
+    color: $dark-gray
+
+  &__item
+    display: inline-block
+    margin: 0 rem(4)
