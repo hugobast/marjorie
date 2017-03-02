@@ -9,24 +9,10 @@ html prefix="og: http://ogp.me/ns#"
 
     meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"
 
-    - if @essay
-      meta property="og:title" content=@essay.title
-    - else
-      meta property="og:title" content="Marjorie B. | Rédaction"
-
-    - if @essay
-      meta property="og:description" content=@essay.excerpt
-    - else
-      meta property="og:description" content="Services de rédaction professionnelle"
-
+    meta property="og:site_name" content="Marjorie B. | Rédaction"
     meta property="og:url" content="#{url_for(only_path: false)}"
 
-    - if @essay
-      meta property="og:image" content=@essay.share_image
-    - else
-      meta property="og:image" content="#{image_url 'share-image.png'}"
-
-    meta property="og:site_name" content="Marjorie B. | Rédaction"
+    = yield :open_graph if content_for? :open_graph
 
     = csrf_meta_tags
 

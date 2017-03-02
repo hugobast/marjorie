@@ -1,3 +1,8 @@
+- content_for :open_graph
+  meta property="og:title" content=@essay.title
+  meta property="og:description" content=@essay.excerpt
+  meta property="og:image" content=@essay.share_image
+
 section.content.essays
   article.essay
     header
