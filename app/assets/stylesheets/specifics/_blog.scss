@@ -1,0 +1,24 @@
+.essays {
+  text-align: center;
+
+  .essay {
+    @include body-content;
+
+    header {
+      @include clearfix;
+
+      .essay-title {
+        @include title-content;
+      }
+    }
+
+    footer {
+      @include shift(2.5);
+      @include span-columns(7);
+
+      background: black;
+      height: 3px;
+      margin-top: 4rem;
+    }
+  }
+}

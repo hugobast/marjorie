@@ -5,6 +5,8 @@ $large-screen: 900px;
 // Typography
 $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
+$logo-font: 'Montserrat', serif;
+$interface-font: 'adelle-sans', sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -44,3 +46,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+$container-top-margin: 7rem;
+$container-left-margin: 15rem;

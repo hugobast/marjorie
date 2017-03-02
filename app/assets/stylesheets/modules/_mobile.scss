@@ -1,0 +1,36 @@
+@media screen and (max-width: 1024px) {
+  nav.mobile {
+    display: block !important;
+    font-family: $logo-font;
+    font-size: rem(13);
+
+    ul.menus {
+      li {
+        padding: 0.5em
+      }
+    }
+  }
+
+  .sticky-navigation {
+    display: none;
+  }
+
+  .banner {
+    top: 0;
+    height: 3rem;
+    margin-bottom: 4rem;
+    background: asset-url('pattern@2x.png') no-repeat top left / 1440px 85px;
+  }
+
+  .container.classification-visible {
+    .content {
+      @include shift(0.5);
+      @include span-columns(11);
+      margin-right: 0;
+    }
+  }
+
+  .classification {
+    display: none;
+  }
+}

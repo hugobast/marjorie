@@ -11,4 +11,35 @@ html {
 html,
 body {
   height: 100%;
+  padding: 0; margin: 0;
+}
+
+.banner {
+  top: 2rem;
+  height: 8rem;
+  margin-bottom: 6rem;
+  position: relative;
+  background: asset-url('pattern@2x.png') no-repeat top left / 1440px 85px;
+}
+
+.container {
+  @include outer-container;
+
+  .content {
+    @include span-columns(7 of 12, no-display);
+    @include shift(2.5);
+
+    @include media(min-width 320px max-width 768px) {
+      @include span-columns(10 of 12, no-display);
+      @include shift(1);
+    }
+  }
+
+  &.classification-visible {
+    .content {
+      @include shift(0.5);
+      @include span-columns(7);
+      margin-right: 0;
+    }
+  }
 }
