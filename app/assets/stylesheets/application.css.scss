@@ -23,9 +23,11 @@ body, html {
 }
 
 .banner {
+  top: 2rem;
   height: 8rem;
   margin-bottom: 6rem;
   position: relative;
+  background: asset-url('pattern@2x.png') no-repeat top left / 1440px 85px;
 }
 
 .container {
@@ -123,9 +125,10 @@ nav {
   }
 
   .banner {
+    top: 0;
     height: 3rem;
     margin-bottom: 4rem;
-    background: asset-url('pattern@2x.png') no-repeat top left / 414px 60px;
+    background: asset-url('pattern@2x.png') no-repeat top left / 1440px 85px;
   }
 
   .container.classification-visible {
