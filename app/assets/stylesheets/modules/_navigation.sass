@@ -71,11 +71,10 @@
     height: rem(70)
     line-height: rem(70)
     text-align: center
-
+    font-family: $logo-font
     transition: all 0.2s ease-in
 
     &__first
-      font-family: $logo-font
       @include shift(0)
       @include span-columns(3 of 12)
       text-align: left
@@ -83,7 +82,6 @@
     &__middle
       @include shift(0)
       @include span-columns(6 of 12)
-      font-family: $title-font-family
       font-weight: 300
       font-size: rem(13)
 
