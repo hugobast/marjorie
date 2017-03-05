@@ -2,6 +2,34 @@
   "private": true,
   "dependencies": {
     "babel-core": "^6.13.2",
-    "babel-preset-es2015": "6.9.0"
+    "babel-preset-es2015": "6.9.0",
+    "loader-utils": "^1.0.2",
+    "vue": "^2.2.1"
+  },
+  "name": "marjorie",
+  "scripts": {
+    "test": "karma start --single-run --no-auto-watch karma.config.js",
+    "autotest": "karma start karma.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugobast/marjorie.git"
+  },
+  "author": "hugobast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugobast/marjorie/issues"
+  },
+  "homepage": "https://github.com/hugobast/marjorie#readme",
+  "devDependencies": {
+    "babel-loader": "^6.3.2",
+    "chai": "^3.5.0",
+    "karma": "^1.5.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-nightmare": "^0.4.2",
+    "karma-webpack": "^2.0.2",
+    "mocha": "^3.2.0",
+    "webpack": "^2.2.1"
   }
 }

@@ -8,3 +8,7 @@
 
  *= require archive
  */
+
+import Typewriter from 'modules/typewriter';
+
+console.log(Typewriter);

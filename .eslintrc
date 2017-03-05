@@ -1,0 +1,15 @@
+module.exports = {
+  "extends": "airbnb-base",
+  "plugins": [
+    "import",
+    "mocha"
+  ],
+  "env": {
+  "mocha": true,
+  "jquery": true,
+  "browser": true,
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  }
+};

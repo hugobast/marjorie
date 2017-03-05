@@ -32,6 +32,7 @@ gem 'reform',                          '~> 2.2'
 gem 'reform-rails',                    '~> 0.1'
 gem 'slim',                            '~> 3.0'
 gem 'sprockets',                       '4.0.0.beta4'
+gem 'sprockets-commoner',              '~> 0.6'
 gem 'state_machines-activerecord',     '~> 0.4'
 gem 'uglifier',                        '>= 1.3.0'
 
