@@ -1,0 +1,20 @@
+@keyframes blink
+  from, to
+    color: transparent
+  50%
+    color: $dark-gray
+
+.hero
+  height: rem(400)
+  display: flex
+  align-items: center
+
+  &__copy
+    margin-left: rem(10)
+    font-size: rem(40)
+
+.caret
+  padding: rem(2)
+
+  &__blinking
+    animation: 1s blink step-end infinite
