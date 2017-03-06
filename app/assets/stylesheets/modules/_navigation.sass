@@ -74,14 +74,19 @@
     font-family: $logo-font
     transition: all 0.2s ease-in
 
+    > ul
+      margin-top: 0
+
     &__first
       @include shift(0)
       @include span-columns(3 of 12)
+      font-family: $logo-font
       text-align: left
 
     &__middle
       @include shift(0)
       @include span-columns(6 of 12)
+      font-family: $logo-font
       font-weight: 300
       font-size: rem(13)
 

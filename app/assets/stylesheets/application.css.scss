@@ -1,4 +1,9 @@
 @import 'bourbon/bourbon';
+
+// Grid
+$gutter: 1em;
+$max-width: 900px;
+
 @import 'neat';
 @import 'base/base';
 @import 'modules/mixins';
@@ -10,6 +15,7 @@
 @import 'modules/mobile';
 @import 'modules/socials';
 @import 'modules/hero';
+@import 'modules/services';
 @import 'specifics/contacts';
 @import 'specifics/clients';
 @import 'specifics/home';

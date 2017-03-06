@@ -17,7 +17,6 @@ body {
 .banner {
   top: 2rem;
   height: 8rem;
-  margin-bottom: 6rem;
   position: relative;
   background: asset-url('pattern@2x.png') no-repeat top left / 1440px 85px;
 }
@@ -42,4 +41,16 @@ body {
       margin-right: 0;
     }
   }
+}
+
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
+hr {
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: 3px solid $light-gray;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }
