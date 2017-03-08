@@ -40,7 +40,7 @@
   @include span-columns(12)
 
   background: rgba(255, 255, 255, 1)
-  box-shadow: 1px -1px 16px -5px rgba(0, 0, 0, 0.75)
+  box-shadow: 1px -1px 4px -1px rgba(0, 0, 0, 1)
 
   position: fixed
   right: 0
@@ -68,8 +68,8 @@
       display: inline-block
 
   &__items
-    height: rem(70)
-    line-height: rem(70)
+    height: rem(76)
+    line-height: rem(76)
     text-align: center
     font-family: $logo-font
     transition: all 0.2s ease-in
@@ -97,10 +97,12 @@
   &__logo
     display: inline-block
     font-family: $logo-font
-    font-size: rem(70)
+    font-size: rem(36)
+    line-height: rem(60)
     font-weight: 300
-
-    transition: font-size 0.2s ease-in
+    padding: rem(5)
+    border: 3px solid $dark-gray
+    transition: all 0.2s ease-in
 
   &__menus
     &__item
@@ -111,11 +113,13 @@
   &__shrink
     .sticky-navigation
       &__items
-        height: rem(40)
-        line-height: rem(40)
+        height: rem(44)
+        line-height: rem(44)
 
       &__logo
-        font-size: rem(40)
+        font-size: rem(18)
+        line-height: rem(30)
+        border: 2px solid $dark-gray
 
 nav
   font-size: 0.9rem
