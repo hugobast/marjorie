@@ -2,7 +2,7 @@
   var $el = $('#content');
 
   if ($el.length) {
-    options = {
+    var options = {
       editor: $el[0],
       stay: false,
       list: [
