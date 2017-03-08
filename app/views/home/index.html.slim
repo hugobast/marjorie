@@ -16,3 +16,13 @@ hr
 
 .section.essays
   h1 Blogue
+
+  .essay__grid
+    - @essays.each do |essay|
+      .essay
+        .essay__image= image_tag essay.share_image
+
+        .essay__title
+          h2= essay.title
+
+        .essay__content=raw essay.excerpt
