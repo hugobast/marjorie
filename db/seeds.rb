@@ -6,15 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin = User.find_or_create_by!(
-  username: 'marjorie',
-  email: 'marjorie@example.com',
-  is_admin: true)
+if (admin = User.find_by(username: 'marjorie'))
+  admin.update(password: '12345678', password_confirmation: '12345678')
+else
+  User.create!(
+    username: 'marjorie',
+    email: 'marjorie@example.com',
+    is_admin: true,
+    password: '12345678'
+  )
+end
 
-admin.update(password: '12345678',
-  password_confirmation: '12345678')
-
-section = Section.friendly.find('blog')
+section = Section.find_or_create_by(name: 'Blog', position: 1, slug: 'blog')
 
 100.times do
   essay = Essay.create(
