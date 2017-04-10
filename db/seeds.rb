@@ -26,12 +26,12 @@ section = Section.find_or_create_by(name: 'Blog',
     content: [
       "<p>#{Faker::Hipster.paragraph(10)}</p>",
 
-      "<p><img src='#{Faker::Placeholdit.image('400x600', 'jpg', 'dedede', '000', Faker::Hipster.sentence)}'></p>",
+      "<p><img src='http://www.fillmurray.com/g/400/500'></p>",
 
       "<p>#{Faker::Hipster.paragraph(10)}</p>",
       "<p>#{Faker::Hipster.paragraph(10)}</p>",
 
-      "<p><img src='#{Faker::Placeholdit.image('400x600', 'jpg', 'dedede', '000', Faker::Hipster.sentence)}'></p>",
+      "<p><img src='http://www.fillmurray.com/g/400/400'></p>",
 
       "<p>#{Faker::Hipster.paragraph(10)}</p>"
     ].join)
