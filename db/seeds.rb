@@ -9,12 +9,10 @@
 if (admin = User.find_by(username: 'marjorie'))
   admin.update(password: '12345678', password_confirmation: '12345678')
 else
-  User.create!(
-    username: 'marjorie',
-    email: 'marjorie@example.com',
-    is_admin: true,
-    password: '12345678'
-  )
+  User.create!(username: 'marjorie',
+               email: 'marjorie@example.com',
+               is_admin: true,
+               password: '12345678')
 end
 
 section = Section.find_or_create_by(name: 'Blog', position: 1, slug: 'blog')
