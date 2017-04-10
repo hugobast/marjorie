@@ -15,7 +15,10 @@ else
                password: '12345678')
 end
 
-section = Section.find_or_create_by(name: 'Blog', position: 1, slug: 'blog')
+section = Section.find_or_create_by(name: 'Blog',
+                                    position: 1,
+                                    slug: 'blog',
+                                    is_main: true)
 
 100.times do
   essay = Essay.create(
